@@ -75,6 +75,9 @@ a[disabled] {
   border-radius: 0;
   .panel-title {
     text-transform: uppercase;
+    img {
+      max-width: 300px;;
+    }
   }
 }
 
@@ -84,6 +87,10 @@ a[disabled] {
   p {
     color: @aac-yellow;
   }
+}
+
+.btn--red {
+  .button-variant(#ffffff; @aac-red; @aac-red);
 }
 
 @aac-yellow: #f69f1a;
@@ -156,4 +163,14 @@ ordercloud-product-search {
 .home__basket-icon {
   max-width: 100px;
   margin-right: @grid-gutter-width;
+}
+
+img {
+  max-width: 100%;
+}
+
+.c-topnav__brand {
+  max-width: 200px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
