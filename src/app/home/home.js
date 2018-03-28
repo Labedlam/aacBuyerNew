@@ -18,10 +18,11 @@ function HomeConfig($stateProvider) {
 	;
 }
 
-function HomeController(vendors, $state, ocPunchout, CurrentOrder) {
+function HomeController(vendors, $state, ocPunchout, CurrentOrder, environment) {
 	var vm = this;
 	vm.vendors = vendors;
 	vm.toPunchOut = function(ID){
+		if((environment === 'test') | ( environment === 'staging')) ID =  ID + 'Test';
 		var punchoutCategory = ocPunchout.IsPunchoutCategory(ID);
         if (punchoutCategory) {
             vm.loading = ocPunchout.SetupRequest(punchoutCategory.Name, punchoutCategory.SupplierPartID, CurrentOrder.ID)
