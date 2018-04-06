@@ -8,11 +8,11 @@
         <h3> Browse by {{shopBy.type}}</h3>
         <div>
                 <div ng-if="shopBy.type === 'Vendors'">
-                        <div class="row">
+                        <!-- <div class="row">
                                 <div class="col-xs-12">
                                         <b class="pull-right"> {{shopBy.list.length}} results</b>
                                 </div>
-                        </div>
+                        </div> -->
                         <div class="row row-flex">
                                 <div class="col-xs-6 col-md-3 col-lg-2" ng-repeat="type in shopBy.list">
                                         <div class="c-category-card" ui-sref="productFilterList({categoryID: null, vendor: type.Value})">
@@ -25,8 +25,7 @@
                         <div class="row">
                                 <div class="col-xs-12">
                                         <h5 class="pull-right">
-                                                <b>{{(application.$ocMedia('min-width:768px') ? shopBy.list.Meta.ItemRange[0] : '1') + ' - '
-                                                        + shopBy.list.Meta.ItemRange[1] + ' of ' + shopBy.list.Meta.TotalCount + ' results'}}</b>
+                                                <b>Page {{(application.$ocMedia('min-width:768px') ? shopBy.list.Meta.Page : '1') + shopBy.list.Meta.Page[1] + ' of ' + shopBy.list.Meta.TotalPages}}</b>
                                         </h5>
                                 </div>
                         </div>
