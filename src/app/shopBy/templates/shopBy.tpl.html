@@ -25,8 +25,7 @@
                         <div class="row">
                                 <div class="col-xs-12">
                                         <h5 class="pull-right">
-                                                <b>{{(application.$ocMedia('min-width:768px') ? shopBy.list.Meta.ItemRange[0] : '1') + ' - '
-                                                        + shopBy.list.Meta.ItemRange[1] + ' of ' + shopBy.list.Meta.TotalCount + ' results'}}</b>
+                                                <b>Page {{(application.$ocMedia('min-width:768px') ? shopBy.list.Meta.Page : '1') + shopBy.list.Meta.Page[1] + ' of ' + shopBy.list.Meta.TotalPages}}</b>
                                         </h5>
                                 </div>
                         </div>
