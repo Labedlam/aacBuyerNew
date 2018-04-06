@@ -107,7 +107,7 @@ function CartController($rootScope, $scope,  $state, $filter, toastr, OrderCloud
             .then(function() {
                 OrderCloudSDK.Orders.Delete('outgoing', order.ID)
                     .then(function(){
-                        $state.go("productBrowse.products",{}, {reload:'base'})
+                        $state.go('home',{}, {reload:'base'})
                     });
             });
     };
