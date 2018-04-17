@@ -29,7 +29,7 @@ a[disabled] {
         font-size: 36px;
     }
     .jumbotron__img {
-        max-width: 50%;
+        max-width: 100%;
     }
     .lead {
         text-transform: uppercase;
@@ -62,13 +62,22 @@ a[disabled] {
     }
 }
 
+.home-arrow {
+    width: 15%;
+    margin: 0 10px 10px 10px;
+    &.--bottom {
+        transform: scaleX(-1);
+    }
+}
+
+
 .home__arrow-icon {
     padding: 0 @grid-gutter-width/2;
-    &.rotate-45 {
-        transform: rotate(45deg);
+    &.rotate-25 {
+        transform: rotate(-25deg);
     }
-    &.rotate-315 {
-        transform: rotate(315deg);
+    &.rotate-385 {
+        transform: rotate(385deg);
     }
     &.rotate-85 {
         transform: rotate(105deg);
@@ -81,6 +90,7 @@ a[disabled] {
 .home__panel {
     border-width: 10px;
     border-radius: 0;
+    margin-bottom: @grid-gutter-width/2;
     .panel-title {
         text-transform: uppercase;
         font-size: 2.5rem;
@@ -120,7 +130,7 @@ a[disabled] {
 
 ordercloud-product-search {
     display: block;
-    margin-bottom: @grid-gutter-width;
+    margin-bottom: @grid-gutter-width/2;
 }
 
 .anchor__img {
@@ -166,6 +176,7 @@ ordercloud-product-search {
 }
 
 .home__well {
+    padding: 0;
     background-color: transparent;
     box-shadow: none;
     border-color: transparent;
@@ -176,7 +187,17 @@ ordercloud-product-search {
         margin-bottom: 0;
     }
 }
-
+.home__checkout--title:before {
+    content: "";
+    background-image: url('/assets/images/basket.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    display: inline-block;
+    top: 6px;
+    width: 6rem;
+    height: 4rem;
+}
 .home__basket-icon {
     max-width: 100px;
     margin-right: @grid-gutter-width;
@@ -186,10 +207,14 @@ ordercloud-product-search {
 img {
     max-width: 100%;
 }
-
 // @swalker = ultimate shame: END
+
 .c-topnav__brand {
     max-width: 200px;
     padding-top: 5px;
     padding-bottom: 5px;
 }
+
+// Flex Utitlies
+
+
