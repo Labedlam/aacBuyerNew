@@ -1,7 +1,7 @@
 <article class="home">
     <div class="jumbotron text-center home__jumbotron">
         <h1 class=" sr-only jumbotron__title">Welcome to the AdoptAClassroom.org Marketplace!</h1>
-        <img alt="Welcome to the AdoptAClassroom.org Marketplace!" src="/assets/images/AAC-Block.png">
+        <img class="jumbotron__img" alt="Welcome to the AdoptAClassroom.org Marketplace!" src="/assets/images/AAC-Block.png">
         <p class="lead">Two ways to shop, one cart, one checkout.</p>
     </div>
     <div class="row row-flex">
@@ -16,17 +16,18 @@
         <div class="col-sm-6">
             <div class="panel panel-default text-center row-flex-inner home__panel panel--red">
                 <div class="panel-heading">
-                        <h2 class="panel-title">AdoptAClassroom.org Store</h2>
+                    <h2 class="panel-title">AdoptAClassroom.org Store</h2>
                 </div>
                 <div class="panel-body">
-                        <p class="lead panel--red">AdoptAClassroom.org Store: Shop thousands of products from the following vendors all in one place! Our consolidated search makes it easy to find what you need!</p>
+                    <p class="home__panel--lead panel--red">Shop thousands of products from the following vendors all in one place! Our consolidated search makes
+                        it easy to find what you need!</p>
                     <div class="tags tags--inline">
                         <span class="tags__tag" ng-repeat="vendor in home.vendors">{{vendor.Name}}</span>
                     </div>
                     <ordercloud-product-search></ordercloud-product-search>
                     <div class="row row-flex-sm">
                         <div class="col-sm-4">
-                            <a class="btn btn-block btn-lg btn--red btn--tile row-flex-inner" ui-sref="shopBy({type:'category'})" >Shop by Category</a>
+                            <a class="btn btn-block btn-lg btn--red btn--tile row-flex-inner" ui-sref="shopBy({type:'category'})">Shop by Category</a>
                         </div>
                         <div class="col-sm-4">
                             <a class="btn btn-block btn-lg btn--red btn--tile row-flex-inner" ui-sref="shopBy({type:'vendor'})">Shop by Vendor</a>
@@ -44,7 +45,8 @@
                     <h2 class="panel-title">Affiliated Vendors</h2>
                 </div>
                 <div class="panel-body">
-                    <p class="lead">Affiliate Vendors: Shop with the following affiliate vendors by clicking the links below to explore each vendor’s product offerings. Search separately within each vendor’s store</p>
+                    <p class="home__panel--lead">Shop with the following affiliate vendors by clicking the links below to explore each vendor’s product
+                        offerings. Search separately within each vendor’s store</p>
                     <div class="row row-flex-sm">
                         <div class="col-xs-6 col-sm-4">
                             <a class="anchor__img" ng-click="home.toPunchOut('TopStores_BestBuy')">
@@ -98,6 +100,7 @@
         </div>
     </div>
     <div class="well home__well text-center">
-        <h2><img class="home__basket-icon"src="/assets/images/basket.svg" />Consolidated checkout – all in one cart</h2>
+        <h2>
+            <img class="home__basket-icon" src="/assets/images/basket.svg" />Consolidated checkout – all in one cart</h2>
     </div>
 </article>
