@@ -198,6 +198,13 @@ function VendorShippingCriteria() {
 			}
 		},
 		{
+			name: 'Rocketbook',
+			minOrderAmount: 0,
+			shippingCostFunc: function(order) {
+				return 7;
+			}
+		},
+		{
 			name: 'Laser Classroom',
 			minOrderAmount: 0,
 			shippingCostFunc: function(order) {
@@ -298,7 +305,7 @@ function VendorShippingCriteria() {
 			name: 'WestMusic',
 			minOrderAmount: 0,
 			shippingCostFunc: function(order) {
-				return 0.07*order.amount;
+				return 0.09*order.amount;
 			}
 		},
 		{

@@ -1,0 +1,51 @@
+<div>
+        <ol class="breadcrumb">
+                <li>
+                        <a ui-sref="home">Home</a>
+                </li>
+                <li>{{shopBy.type}}</li>
+        </ol>
+        <h3> Browse by {{shopBy.type}}</h3>
+        <div>
+                <div ng-if="shopBy.type === 'Vendors'">
+                        <!-- <div class="row">
+                                <div class="col-xs-12">
+                                        <b class="pull-right"> {{shopBy.list.length}} results</b>
+                                </div>
+                        </div> -->
+                        <div class="row row-flex">
+                                <div class="col-xs-6 col-md-3 col-lg-2" ng-repeat="type in shopBy.list">
+                                        <div class="c-category-card" ui-sref="productFilterList({categoryID: null, vendor: type.Value})">
+                                                <h3 class="c-card__title">{{type.Name}}</h3>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+                <div ng-if="shopBy.type === 'Categories'">
+                        <div class="row">
+                                <div class="col-xs-12">
+                                        <h5 class="pull-right">
+                                                <b>Page {{(application.$ocMedia('min-width:768px') ? shopBy.list.Meta.Page : '1') + shopBy.list.Meta.Page[1] + ' of ' + shopBy.list.Meta.TotalPages}}</b>
+                                        </h5>
+                                </div>
+                        </div>
+                        <div class="row row-flex">
+                                <div class="col-xs-6 col-md-3 col-lg-2" ng-repeat="type in shopBy.list.Items">
+                                        <div class="c-category-card" ui-sref="productFilterList({categoryID: type.ID, vendor: null})">
+                                                <h3 class="c-card__title">{{type.Name}}</h3>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="text-center" ng-if="application.$ocMedia('min-width:768px') && shopBy.list.Meta.TotalPages > 1">
+                                <uib-pagination boundary-links="shopBy.list.Meta.TotalPages > 5" max-size="5" total-items="shopBy.list.Meta.TotalCount" items-per-page="shopBy.list.Meta.PageSize"
+                                        ng-model="shopBy.list.Meta.Page" ng-change="shopBy.pageChanged()">
+                                </uib-pagination>
+                        </div>
+                        <button type="button" ng-if="application.$ocMedia('max-width:767px')" class="btn btn-default btn-block btn-lg" ng-show="shopBy.list.Meta.Page < shopBy.list.Meta.TotalPages"
+                                ng-click="shopBy.loadMore()">Load More
+                        </button>
+
+                </div>
+
+        </div>
+</div>
