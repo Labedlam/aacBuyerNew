@@ -16,7 +16,8 @@
                         <div class="row row-flex">
                                 <div class="col-xs-6 col-md-3 col-lg-2" ng-repeat="type in shopBy.list">
                                         <div class="c-category-card" ui-sref="productFilterList({categoryID: null, vendor: type.Value})">
-                                                <h3 class="c-card__title">{{type.Name}}</h3>
+                                                <img ng-src="{{type.Image}}" alt="type.Name">
+                                                <!-- <h3 class="c-card__title">{{type.Name}}</h3> -->
                                         </div>
                                 </div>
                         </div>
