@@ -4,7 +4,7 @@
       <div class="c-mainnav__group--left">
         <!--BRAND-->
         <div class="c-mainnav__item c-mainnav__brand">
-          <a class="mainnav-nav-home" ng-click="base.logout();" class="exitstore">
+          <a class="mainnav-nav-home"  class="exitstore">
             <span class="sr-only">{{application.name}}</span>
             <img src="/assets/images/aac-logo.png" />
           </a>
@@ -46,7 +46,7 @@
     <div class="c-topnav__group--left">
       <!--PRODUCT / CATEGORY BROWSE-->
       <div class="c-topnav__item c-topnav__browse">
-        <a href="https://stage-adoptaclassroom.cs12.force.com/teachers/s/login/?startURL=%2Fteachers%2Fs%2F&ec=302">
+        <a href="{{base.teachersDashboard}}">
           <i class="fa fa-home"></i>
           <span class="sr-only">Teacher Portal Home</span>
         </a>
