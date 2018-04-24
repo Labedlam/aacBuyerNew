@@ -65,12 +65,9 @@ a[disabled] {
 .home-arrow {
   width: 15%;
   margin: 0 10px 10px 10px;
-}
-
-.home-arrow--bottom {
-  width: 15%;
-  margin: 0 10px 10px 10px;
-  transform: scaleX(-1);
+  &.--bottom {
+    transform: scaleX(-1);
+  }
 }
 
 .home__arrow-icon {
@@ -80,12 +77,6 @@ a[disabled] {
   }
   &.rotate-385 {
     transform: rotate(385deg);
-  }
-  &.rotate-85 {
-    transform: rotate(105deg);
-  }
-  &.rotate-275 {
-    transform: rotate(255deg);
   }
   &.rotate-85 {
     transform: rotate(105deg);
@@ -209,8 +200,6 @@ ordercloud-product-search {
 img {
   max-width: 100%;
 }
-// @swalker = ultimate shame: END
-
 // @swalker = ultimate shame: END
 
 .c-topnav__brand {
