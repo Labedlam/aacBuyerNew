@@ -65,12 +65,9 @@ a[disabled] {
 .home-arrow {
   width: 15%;
   margin: 0 10px 10px 10px;
-}
-
-.home-arrow--bottom {
-  width: 15%;
-  margin: 0 10px 10px 10px;
-  transform: scaleX(-1);
+  &.--bottom {
+    transform: scaleX(-1);
+  }
 }
 
 .home__arrow-icon {
@@ -86,12 +83,6 @@ a[disabled] {
   }
   &.rotate-275 {
     transform: rotate(255deg);
-  }
-  &.rotate-85 {
-    transform: rotate(85deg);
-  }
-  &.rotate-275 {
-    transform: rotate(275deg);
   }
 }
 
@@ -114,9 +105,6 @@ a[disabled] {
   .home__panel--lead {
     color: @aac-red;
   }
- .lead {
-   color: @aac-red;
- }
 }
 
 .btn--red {
@@ -183,7 +171,7 @@ ordercloud-product-search {
   background-color: transparent;
   box-shadow: none;
   border-color: transparent;
-  border-radius: none;
+  border-radius: 0;
   h2 {
     text-transform: uppercase;
     margin-top: 0;
@@ -212,7 +200,6 @@ ordercloud-product-search {
 img {
   max-width: 100%;
 }
-
 // @swalker = ultimate shame: END
 
 .c-topnav__brand {
