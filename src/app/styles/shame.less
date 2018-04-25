@@ -65,9 +65,12 @@ a[disabled] {
 .home-arrow {
   width: 15%;
   margin: 0 10px 10px 10px;
-  &.--bottom {
-    transform: scaleX(-1);
-  }
+}
+
+.home-arrow--bottom {
+  width: 15%;
+  margin: 0 10px 10px 10px;
+  transform: scaleX(-1);
 }
 
 .home__arrow-icon {
@@ -171,7 +174,7 @@ ordercloud-product-search {
   background-color: transparent;
   box-shadow: none;
   border-color: transparent;
-  border-radius: 0;
+  border-radius: none;
   h2 {
     text-transform: uppercase;
     margin-top: 0;
@@ -200,6 +203,7 @@ ordercloud-product-search {
 img {
   max-width: 100%;
 }
+
 // @swalker = ultimate shame: END
 
 .c-topnav__brand {
