@@ -7,7 +7,8 @@ angular.module('orderCloud')
 ;
 
 function ProductBrowseConfig($urlRouterProvider, $stateProvider) {
-    $urlRouterProvider.when('/browse', '/browse/products');
+    //$urlRouterProvider.when('/browse', '/browse/products');
+    $urlRouterProvider.when('/browse', '/home');
     $stateProvider
         .state('productBrowse', {
             abstract: true,
