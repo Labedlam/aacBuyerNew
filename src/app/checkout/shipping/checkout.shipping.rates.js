@@ -204,6 +204,13 @@ function VendorShippingCriteria() {
 			}
 		},
 		{
+			name: 'Rocketbook',
+			minOrderAmount: 0,
+			shippingCostFunc: function(order) {
+				return 7;
+			}
+		},
+		{
 			name: 'Laser Classroom',
 			minOrderAmount: 0,
 			shippingCostFunc: function(order) {

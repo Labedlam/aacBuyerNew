@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<!DOCTYPE cXML SYSTEM "http://xml.cXML.org/schemas/cXML/1.2.011/InvoiceDetail.dtd">
+<cXML version="1.2.011" payloadID="0206201837545.cXML.400446973001.0McgYHttSTbyC6v3@officedepot.com" timestamp="2018-02-06T04:12:37-05:00" xml:lang="en-US">
+  <Header>
+    <From>
+      <Credential domain="NetworkId">
+        <Identity>AN01000000147</Identity>
+      </Credential>
+    </From>
+    <To>
+      <Credential domain="NetworkID">
+        <Identity>01608956-CXML</Identity>
+      </Credential>
+    </To>
+    <Sender>
+      <Credential domain="NetworkId">
+        <Identity>AN01000000147</Identity>
+        <SharedSecret>Welcome1</SharedSecret>
+      </Credential>
+      <UserAgent>test</UserAgent>
+    </Sender>
+  </Header>
+  <Request deploymentMode="production">
+    <InvoiceDetailRequest>
+      <InvoiceDetailRequestHeader invoiceID="400446973001" purpose="standard" operation="new" invoiceDate="2018-02-06T12:00:00-05:00">
+        <InvoiceDetailHeaderIndicator/>
+        <InvoiceDetailLineIndicator/>
+        <InvoicePartner>
+          <Contact role="remitTo">
+            <Name xml:lang="en-US">OFFICE DEPOT</Name>
+            <PostalAddress>
+              <Street>P O BOX 633211</Street>
+              <City>CINCINNATI</City>
+              <State>OH</State>
+              <PostalCode>45263-3211</PostalCode>
+              <Country isoCountryCode="US">United States</Country>
+            </PostalAddress>
+          </Contact>
+        </InvoicePartner>
+        <InvoicePartner>
+          <Contact role="soldTo">
+            <Name xml:lang="en-US">TEST SCHOOL</Name>
+            <PostalAddress>
+              <Street>1354 E WORTHSVILLE RD</Street>
+              <City>GREENWOOD</City>
+              <State>IN</State>
+              <PostalCode>46143</PostalCode>
+              <Country isoCountryCode="US">United States</Country>
+            </PostalAddress>
+          </Contact>
+        </InvoicePartner>
+        <InvoiceDetailShipping>
+          <Contact role="shipTo" addressID=" ">
+            <Name xml:lang="en-US">TEST SCHOOL</Name>
+            <PostalAddress>
+              <Street>1354 E WORTHSVILLE RD</Street>
+              <City>GREENWOOD</City>
+              <State>IN</State>
+              <PostalCode>46143</PostalCode>
+              <Country isoCountryCode="US">United States</Country>
+            </PostalAddress>
+          </Contact>
+          <Contact role="shipFrom">
+            <Name xml:lang="en-US">Office Depot</Name>
+          </Contact>
+        </InvoiceDetailShipping>
+        <Extrinsic name="invoice due date">20180206</Extrinsic>
+      </InvoiceDetailRequestHeader>
+      <InvoiceDetailOrder>
+        <InvoiceDetailOrderInfo>
+          <OrderReference orderID="3SwfMwDut0OMTSro5eo5dw" orderDate="2018-02-10">
+            <DocumentReference payloadID="73c7bdaf-e66b-4cc9-ba95-db45d2299756"/>
+          </OrderReference>
+          <SupplierOrderInfo orderID="400446973001"/>
+        </InvoiceDetailOrderInfo>
+        <InvoiceDetailItem invoiceLineNumber="1" quantity="2">
+          <UnitOfMeasure>PK</UnitOfMeasure>
+          <UnitPrice>
+            <Money currency="USD">2.76</Money>
+          </UnitPrice>
+          <InvoiceDetailItemReference lineNumber="1">
+            <ItemID>
+              <SupplierPartID>538543</SupplierPartID>
+            </ItemID>
+            <Description xml:lang="en-US">GLUE STICKS,REFILL,GLUE GUN</Description>
+          </InvoiceDetailItemReference>
+          <Extrinsic name="UNSPSC">44120000</Extrinsic>
+        </InvoiceDetailItem>
+        <InvoiceDetailItem invoiceLineNumber="2" quantity="1">
+          <UnitOfMeasure>PK</UnitOfMeasure>
+          <UnitPrice>
+            <Money currency="USD">24.64</Money>
+          </UnitPrice>
+          <InvoiceDetailItemReference lineNumber="2">
+            <ItemID>
+              <SupplierPartID>287454</SupplierPartID>
+            </ItemID>
+            <Description xml:lang="en-US">PEN,MARKER,FLAIR,MED,12PK</Description>
+          </InvoiceDetailItemReference>
+          <Extrinsic name="UNSPSC">44120000</Extrinsic>
+        </InvoiceDetailItem>
+      </InvoiceDetailOrder>
+      <InvoiceDetailSummary>
+        <SubtotalAmount>
+          <Money currency="USD">30.16</Money>
+        </SubtotalAmount>
+        <Tax>
+          <Money currency="USD">2.11</Money>
+          <Description xml:lang="en-US">Tax</Description>
+          <TaxDetail purpose="tax" category="sales">
+            <TaxAmount>
+              <Money currency="USD">2.11</Money>
+            </TaxAmount>
+          </TaxDetail>
+        </Tax>
+        <GrossAmount>
+          <Money currency="USD">30.16</Money>
+        </GrossAmount>
+        <NetAmount>
+          <Money currency="USD">32.27</Money>
+        </NetAmount>
+      </InvoiceDetailSummary>
+    </InvoiceDetailRequest>
+  </Request>
+</cXML>
