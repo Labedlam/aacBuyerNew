@@ -5,13 +5,13 @@
   "buyerid": "AACBuyer",
   "catalogid": "AACBuyer",
   "clientsecret": "myclientsecret",
-  "environment": "staging",
+  "environment": "prod",
   "defaultstate": "home",
   "anonymous": false,
   "bootswatchtheme": null,
   "punchoutproduct": "AACPunchoutProduct",
   "punchouturl": "https://vendors.adoptaclassroom.org", 
-  "adoptAClassromURL": "https://stage-adoptaclassroom.cs12.force.com/teachers/s/",
+  "adoptAClassromURL": "https://adoptaclassroom.force.com/teachers/s/",
   "vendors": [
     {
       "Name": "AKJ Education",
@@ -75,8 +75,10 @@
     },
     {
       "Name": "Rocketbook",
+
       "Value": "Rocketbook",
       "Image": "../assets/images/vendors/Rocketbook.png"
+      "Value": "Rocketbook"
     },
     {
       "Name": "Scholastic",
