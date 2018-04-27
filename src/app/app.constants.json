@@ -75,10 +75,8 @@
     },
     {
       "Name": "Rocketbook",
-
       "Value": "Rocketbook",
       "Image": "../assets/images/vendors/Rocketbook.png"
-      "Value": "Rocketbook"
     },
     {
       "Name": "Scholastic",
