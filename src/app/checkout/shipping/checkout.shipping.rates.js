@@ -218,6 +218,13 @@ function VendorShippingCriteria() {
 			}
 		},
 		{
+			name: 'HUE',
+			minOrderAmount: 0,
+			shippingCostFunc: function(order) {
+				return 9.99;
+			}
+		},
+		{
 			name: 'LearningAZ',
 			minOrderAmount: 0,
 			shippingCostFunc: function(order) {return 0;}
