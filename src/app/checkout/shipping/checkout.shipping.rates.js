@@ -273,7 +273,7 @@ function VendorShippingCriteria() {
 					return 0.12*order.amount;
 				if (order.amount <= 2499.99)
 					return 0.11*order.amount;
-				if (order.amount >= 2500.00)
+				if (order.amount > 2500.00)
 					return 0.10*order.amount;
 			}
 		},
