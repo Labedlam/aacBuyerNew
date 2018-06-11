@@ -1,0 +1,35 @@
+// TODO: Documentation
+.make-row-flex-grid(@suffix) {
+    // .row-flex@{suffix} {
+    //     display: flex;
+    //     flex-flow: row wrap;
+    //     >[class^="col-"] {
+    //         display: flex;
+    //         flex-direction: column;
+    //     }
+    //     .row-flex-inner {
+    //         display: flex;
+    //         flex-direction: column;
+    //         flex: 1 1 auto; // IE11 image height hack
+    //         // https://github.com/philipwalton/flexbugs/issues/75
+    //         min-height: 1%;
+    //     }
+    // }
+}
+
+.make-row-flex-grid(~'');
+@media(max-width: @screen-xs-max) {
+    .make-row-flex-grid(-xs);
+}
+
+@media(min-width:@screen-sm-min) {
+    .make-row-flex-grid(-sm);
+}
+
+@media(min-width:@screen-md-min) {
+    .make-row-flex-grid(-md);
+}
+
+@media(min-width:@screen-lg-min) {
+    .make-row-flex-grid(-lg);
+}

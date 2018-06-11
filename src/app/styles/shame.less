@@ -1,23 +1,253 @@
 [ui-sref],
-[ng-click]{
-  cursor: pointer;
+[ng-click] {
+    cursor: pointer;
 }
 
 body.modal-open {
-  padding-right:15px !important;
+    padding-right: 15px !important;
 }
 
 a[disabled] {
-  pointer-events: none;
+    pointer-events: none;
 }
 
 .c-iframe-header {
     // position: fixed;
     width: 100%;
     margin-top: -20px;
-    
     & iframe {
         border-top: none;
     }
 }
-  
+
+.home__jumbotron {
+    background-color: transparent;
+    padding-top: 1rem;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    .jumbotron__title {
+        font-size: 36px;
+    }
+    .jumbotron__img {
+        max-width: 100%;
+    }
+    .lead {
+        text-transform: uppercase;
+        font-style: italic;
+        font-weight: normal;
+    }
+}
+
+.panel-variant(@border;
+@heading-text-color;
+@heading-bg-color;
+@heading-border) {
+    border-color: @border;
+    &>.panel-heading {
+        color: @heading-text-color;
+        background-color: @heading-bg-color;
+        border-color: @heading-border;
+        +.panel-collapse>.panel-body {
+            border-top-color: @border;
+        }
+        .badge {
+            color: @heading-bg-color;
+            background-color: @heading-text-color;
+        }
+    }
+    &>.panel-footer {
+        +.panel-collapse>.panel-body {
+            border-bottom-color: @border;
+        }
+    }
+}
+
+.home-arrow {
+    width: 15%;
+    margin: 0 10px 10px 10px;
+}
+
+.home-arrow--bottom {
+    width: 15%;
+    margin: 0 10px 10px 10px;
+    transform: scaleX(-1);
+}
+
+.home__arrow-icon {
+    padding: 0 @grid-gutter-width/2;
+    &.rotate-25 {
+        transform: rotate(-25deg);
+    }
+    &.rotate-385 {
+        transform: rotate(385deg);
+    }
+    &.rotate-85 {
+        transform: rotate(105deg);
+    }
+    &.rotate-275 {
+        transform: rotate(255deg);
+    }
+}
+
+.home__panel {
+    border-width: 10px;
+    border-radius: 0;
+    margin-bottom: @grid-gutter-width/2;
+    .panel-title {
+        text-transform: uppercase;
+        font-size: 2.5rem;
+        img {
+            max-width: 300px;
+        }
+    }
+    .panel-body {
+        padding-top: 0;
+    }
+}
+
+@aac-red: #ef3e44;
+.panel--red {
+    .panel-variant(@aac-red;
+    @aac-red;
+    #ffffff;
+    transparent);
+    .home__panel--lead {
+        color: @aac-red;
+    }
+}
+
+.btn--red {
+    .button-variant(#ffffff;
+    @aac-red;
+    @aac-red);
+}
+
+@aac-yellow: #f69f1a;
+.panel--yellow {
+    .panel-variant(@aac-yellow;
+    @aac-yellow;
+    #ffffff;
+    transparent);
+    .home__panel--lead {
+        color: @aac-yellow;
+    }
+}
+
+ordercloud-product-search {
+    display: block;
+    margin-bottom: @grid-gutter-width/2;
+}
+
+.anchor__img {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto; // IE11 image height hack // https://github.com/philipwalton/flexbugs/issues/75
+    min-height: 1%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: @grid-gutter-width/2;
+    img {
+        width: 100%;
+        max-width: 150px;
+        filter: grayscale(1);
+    }
+    &:hover {
+        img {
+            filter: grayscale(0);
+        }
+    }
+}
+
+.tags {
+    line-height: 1.5;
+    margin-bottom: @grid-gutter-width;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.tags--inline {
+    .tags__tag {
+        margin-right: 10px;
+    }
+}
+
+.btn--tile {
+    // padding: @grid-gutter-width*.75;
+    white-space: normal;
+    border-radius: @border-radius-large;
+}
+
+.home__well {
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+    border-color: transparent;
+    border-radius: none;
+    h2 {
+        text-transform: uppercase;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+.home__checkout--title:before {
+    content: "";
+    background-image: url('/assets/images/basket.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    display: inline-block;
+    top: 6px;
+    width: 6rem;
+    height: 4rem;
+}
+
+.home__basket-icon {
+    max-width: 100px;
+    margin-right: @grid-gutter-width;
+}
+
+img {
+    max-width: 100%;
+}
+
+.c-topnav__brand {
+    max-width: 200px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.c-topnav {
+    .c-topnav__item:nth-of-type(3) {
+        padding-left: 0;
+        @media (min-width: @screen-md) {
+            min-width: 35rem;
+        }
+        .c-topnav__search {
+            padding: 0;
+            box-shadow: none;
+            margin-bottom: -15px; // this accommodates for the 15px on ordercloud-search directive
+            input {
+                background-color: darken(#20B2AA, 5);
+                border-color: darken(#20B2AA, 5);
+                color: white;
+                &::placeholder {
+                    color: lighten(#20B2AA, 5);
+                }
+            }
+        }
+        .btn-search {
+            background-color: fade(white, 75);
+            color: lighten(#20B2AA, 5);
+            transition: all .25s ease;
+            &:hover {
+                background-color: lighten(#20B2AA, 65);
+            }
+        }
+    }
+}
+
+.mt-2 {
+  margin-top: 2rem !important;
+}

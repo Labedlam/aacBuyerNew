@@ -1,0 +1,44 @@
+<div>
+    <!-- bread crumb -->
+    <ol class="breadcrumb">
+        <li><a ui-sref="home">Home</a></li>
+        <li ng-if="productFilterList.type =='Vendors'"><a ui-sref="shopBy({type:'vendor'})">{{productFilterList.type}}</a></li>
+        <li ng-if="productFilterList.type =='Categories'"><a ui-sref="shopBy({type:'category'})">{{productFilterList.type}}</a></li>
+        <li ng-if="productFilterList.shopBy">{{productFilterList.shopBy}}</li>
+   
+        
+    </ol>
+    <!-- ng-init="productFilterList.treeConfig.initBreadcrumbs(productView.parameters.categoryID)" -->
+    <h3> Products</h3>
+
+    <!--START PRODUCTS LIST-->
+    <div>
+        <div class="no-matches" ng-if="!productFilterList.products.Items.length">
+            <b>No products found.</b>
+        </div>
+        <div ng-if="productFilterList.products.Items.length">
+            <div class="row l-product-grid">
+                <div class=" col-xs-6 col-md-4 col-lg-3 l-product-grid__item"
+                    ng-repeat="product in productFilterList.products.Items"
+                    ng-include="'common/templates/card.product.tpl.html'">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<!--Pagination-->
+    <div class="text-center" ng-if="application.$ocMedia('min-width:768px') && productFilterList.products.Meta.TotalPages > 1">
+        <uib-pagination boundary-links="productFilterList.products.Meta.TotalPages > 5"
+                        max-size="5" total-items="productFilterList.products.Meta.TotalCount"
+                        items-per-page="productFilterList.products.Meta.PageSize"
+                        ng-model="productFilterList.products.Meta.Page"
+                        ng-change="productFilterList.pageChanged()">
+        </uib-pagination>
+    </div>
+    <button type="button"
+            ng-if="application.$ocMedia('max-width:767px')"
+            class="btn btn-default btn-block btn-lg"
+            ng-show="productFilterList.products.Meta.Page < productFilterList.products.Meta.TotalPages"
+            ng-click="productFilterList.loadMore()">Load More
+    </button>
+</div>
