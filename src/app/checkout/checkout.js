@@ -97,9 +97,14 @@ function CheckoutController($state, $rootScope, toastr, OrderCloudSDK, OrderShip
         vm.submitBtnDisabled = true;
         if (CheckoutConfig.TransactionType === 'AuthNet') {
             return ccPayment.AuthCapture(order)
-                .then(function() {
-                    finalSubmit(order);
-                })
+                .then( data => {
+                    if (data[0].ChargeStatus === '1') {
+                        finalSubmit(order);
+                    } else {
+                        toastr.error(data[0].Message, 'Error');
+                        return;
+                    }
+                });
         } else {
             finalSubmit(order);
         }
@@ -138,7 +143,7 @@ function CheckoutController($state, $rootScope, toastr, OrderCloudSDK, OrderShip
         OrderCloudSDK.Orders.RemovePromotion('outgoing', order.ID, promotion.Code)
             .then(function() {
                 $rootScope.$broadcast('OC:UpdatePromotions', order.ID);
-            })
+            });
     };
 
     $rootScope.$on('OC:UpdatePromotions', function(event, orderid) {
@@ -150,7 +155,7 @@ function CheckoutController($state, $rootScope, toastr, OrderCloudSDK, OrderShip
                     vm.promotions = data;
                 }
                 $rootScope.$broadcast('OC:UpdateOrder', orderid);
-            })
+            });
     });
 }
 
