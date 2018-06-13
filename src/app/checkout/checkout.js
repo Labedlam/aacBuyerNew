@@ -97,7 +97,7 @@ function CheckoutController($state, $rootScope, toastr, OrderCloudSDK, OrderShip
         vm.submitBtnDisabled = true;
         if (CheckoutConfig.TransactionType === 'AuthNet') {
             return ccPayment.AuthCapture(order)
-                .then( data => {
+                .then( function(data) {
                     if (data[0].ChargeStatus === '1') {
                         finalSubmit(order);
                     } else {
