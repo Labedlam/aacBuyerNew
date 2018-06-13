@@ -102,6 +102,7 @@ function CheckoutController($state, $rootScope, toastr, OrderCloudSDK, OrderShip
                         finalSubmit(order);
                     } else {
                         toastr.error(data[0].Message, 'Error');
+                        vm.submitBtnDisabled = false;
                         return;
                     }
                 });
