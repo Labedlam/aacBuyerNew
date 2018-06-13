@@ -65,9 +65,12 @@ a[disabled] {
 .home-arrow {
     width: 15%;
     margin: 0 10px 10px 10px;
-    &.home-arrowbottom {
-        transform: scaleX(-1);
-    }
+}
+
+.home-arrow--bottom {
+    width: 15%;
+    margin: 0 10px 10px 10px;
+    transform: scaleX(-1);
 }
 
 .home__arrow-icon {
@@ -96,6 +99,9 @@ a[disabled] {
         img {
             max-width: 300px;
         }
+    }
+    .panel-body {
+        padding-top: 0;
     }
 }
 
@@ -135,8 +141,7 @@ ordercloud-product-search {
 .anchor__img {
     display: flex;
     flex-direction: column;
-    flex: 1 1 auto; // IE11 image height hack
-    // https://github.com/philipwalton/flexbugs/issues/75
+    flex: 1 1 auto; // IE11 image height hack // https://github.com/philipwalton/flexbugs/issues/75
     min-height: 1%;
     justify-content: center;
     align-items: center;
@@ -154,8 +159,11 @@ ordercloud-product-search {
 }
 
 .tags {
-    line-height: 175%;
+    line-height: 1.5;
     margin-bottom: @grid-gutter-width;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
 }
 
 .tags--inline {
@@ -164,12 +172,8 @@ ordercloud-product-search {
     }
 }
 
-.tags__tag {
-    color: #20B2AA;
-}
-
 .btn--tile {
-    // padding: @grid-gutter-width*.75;    
+    // padding: @grid-gutter-width*.75;
     white-space: normal;
     border-radius: @border-radius-large;
 }
@@ -204,14 +208,46 @@ ordercloud-product-search {
     margin-right: @grid-gutter-width;
 }
 
-// @swalker = ultimate shame: START
 img {
     max-width: 100%;
 }
-// @swalker = ultimate shame: END
 
 .c-topnav__brand {
     max-width: 200px;
     padding-top: 5px;
     padding-bottom: 5px;
+}
+
+.c-topnav {
+    .c-topnav__item:nth-of-type(3) {
+        padding-left: 0;
+        @media (min-width: @screen-md) {
+            min-width: 35rem;
+        }
+        .c-topnav__search {
+            padding: 0;
+            box-shadow: none;
+            margin-bottom: -15px; // this accommodates for the 15px on ordercloud-search directive
+            input {
+                background-color: darken(#20B2AA, 5);
+                border-color: darken(#20B2AA, 5);
+                color: white;
+                &::placeholder {
+                    color: lighten(#20B2AA, 5);
+                }
+            }
+        }
+        .btn-search {
+            background-color: fade(white, 75);
+            color: lighten(#20B2AA, 5);
+            transition: all .25s ease;
+            &:hover {
+                background-color: lighten(#20B2AA, 65);
+            }
+        }
+    }
+}
+
+.mt-2 {
+  margin-top: 2rem !important;
 }

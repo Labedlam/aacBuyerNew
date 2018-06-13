@@ -182,7 +182,13 @@ function VendorShippingCriteria() {
 				return 0.15*order.amount;
 			}
 		},
-		
+		{
+			name: 'Rocketbook',
+			minOrderAmount: 0,
+			shippingCostFunc: function(order) {
+				return 7;
+			}
+		},
 		{
 			name: 'Hovercam',
 			minOrderAmount: 0,
@@ -251,6 +257,26 @@ function VendorShippingCriteria() {
 					return 0.14*order.amount;
 			}
 		},
+		{
+			name: 'FunExpress',
+			minOrderAmount: 0,
+			shippingCostFunc: function(order) {
+				if (order.amount <= 35.00)
+					return 10.95;
+				if (order.amount <= 74.99)
+					return 11.95;
+				if (order.amount <= 124.99)
+					return 14.95;
+				if (order.amount <= 199.99)
+					return 19.95;
+				if (order.amount <= 499.99)
+					return 0.12*order.amount;
+				if (order.amount <= 2499.99)
+					return 0.11*order.amount;
+				if (order.amount >= 2500.00)
+					return 0.10*order.amount;
+			}
+		},
 		
 		{
 			name: 'Ooly',
@@ -305,7 +331,7 @@ function VendorShippingCriteria() {
 			name: 'WestMusic',
 			minOrderAmount: 0,
 			shippingCostFunc: function(order) {
-				return 0.09*order.amount;
+				return 0.07*order.amount;
 			}
 		},
 		{
