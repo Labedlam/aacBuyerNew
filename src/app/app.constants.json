@@ -44,9 +44,19 @@
       "Image": "../assets/images/vendors/Carson_Dellosa.png"
     },
     {
+      "Name": "Fun Express",
+      "Value": "Fun Express",
+      "Image": "../assets/images/vendors/Fun_Express.png"
+    },
+    {
       "Name": "HoverCam",
       "Value": "HoverCam",
       "Image": "../assets/images/vendors/HoverCam.png"
+    },
+    {
+      "Name": "HUE",
+      "Value": "HUE",
+      "Image": "../assets/images/vendors/HUE_Blue_logo.jpg"
     },
     {
       "Name": "LASER Classroom",
