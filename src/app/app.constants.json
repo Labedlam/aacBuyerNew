@@ -6,7 +6,7 @@
   "catalogid": "AACBuyer",
   "clientsecret": "myclientsecret",
   "environment": "prod",
-  "defaultstate": "productBrowse.products",
+  "defaultstate": "home",
   "anonymous": false,
   "bootswatchtheme": null,
   "punchoutproduct": "AACPunchoutProduct",
@@ -15,87 +15,108 @@
   "vendors": [
     {
       "Name": "AKJ Education",
-      "Value": "AKJ Education"
+      "Value": "AKJ Education",
+      "Image": "../assets/images/vendors/AKJ_Education.jpg"
     },
     {
       "Name": "Adventure to Fitness",
-      "Value": "adventure"
+      "Value": "adventure",
+      "Image": "../assets/images/vendors/Adventure_to_Fitness.png"
     },
     {
       "Name": "Becker's",
-      "Value": "Becker's"
+      "Value": "Becker's",
+      "Image": "../assets/images/vendors/Beckers.png"
     },
     {
       "Name": "Bazillions",
-      "Value": "Bazillions"
+      "Value": "Bazillions",
+      "Image": "../assets/images/vendors/Bazillions.jpg"
     },
     {
       "Name": "Board Share",
-      "Value": "Board Share"
+      "Value": "Board Share",
+      "Image": "../assets/images/vendors/BoardShare.png"
     },
     {
       "Name": "Carson",
-      "Value": "Carson"
+      "Value": "Carson",
+      "Image": "../assets/images/vendors/Carson_Dellosa.png"
     },
     {
       "Name": "HoverCam",
-      "Value": "HoverCam"
+      "Value": "HoverCam",
+      "Image": "../assets/images/vendors/HoverCam.png"
     },
     {
       "Name": "LASER Classroom",
-      "Value": "laser"
+      "Value": "laser",
+      "Image": "../assets/images/vendors/Laser_Classroom.jpg"
     },
     {
       "Name": "Learning A-Z",
-      "Value": "learning AZ"
+      "Value": "learning AZ",
+      "Image": "../assets/images/vendors/Learning_A_Z.png"
     },
     {
       "Name": "Lorenz Educational Press",
-      "Value": "Lorenz"
+      "Value": "Lorenz",
+      "Image": "../assets/images/vendors/Lorenz.png"
     },
     {
       "Name": "Miss Humblebee's Academy",
-      "Value": "Humblebees"
+      "Value": "Humblebees",
+      "Image": "../assets/images/vendors/Miss_Humblebees.png"
     },
     {
       "Name": "OOLY",
-      "Value": "OOLY"
+      "Value": "OOLY",
+      "Image": "../assets/images/vendors/OOLY.jpg"
     },
     {
       "Name": "Rocketbook",
-      "Value": "Rocketbook"
+      "Value": "Rocketbook",
+      "Image": "../assets/images/vendors/Rocketbook.png"
     },
     {
       "Name": "Scholastic",
-      "Value": "Scholastic"
+      "Value": "Scholastic",
+      "Image": "../assets/images/vendors/Scholastic_Teacher_Store.png"
     },
     {
       "Name": "Scholastic Classroom Magazines",
-      "Value": "ClassroomMagazines"
+      "Value": "ClassroomMagazines",
+      "Image": "../assets/images/vendors/Scholastic_Classroom_Magazines.jpg"
     },
     {
       "Name": "Science4us",
-      "Value": "Science4us"
+      "Value": "Science4us",
+      "Image": "../assets/images/vendors/Science4Us.png"
     },
     {
       "Name": "Speakaboos",
-      "Value": "Speakaboos"
+      "Value": "Speakaboos",
+      "Image": "../assets/images/vendors/Speakaboos.png"
     },
     {
       "Name": "Spelling City",
-      "Value": "Spelling City"
+      "Value": "Spelling City",
+      "Image": "../assets/images/vendors/Spelling_City.jpg"
     },
     {
       "Name": "West Music",
-      "Value": "West Music"
+      "Value": "West Music",
+      "Image": "../assets/images/vendors/West_Music.png"
     },
     {
       "Name": "Wonder Workshop",
-      "Value": "Wonder Workshop"
+      "Value": "Wonder Workshop",
+      "Image": "../assets/images/vendors/Wonder_Workshop.png"
     },
     {
       "Name": "Your Dollar Buys",
-      "Value": "Your Dollar"
+      "Value": "Your Dollar",
+      "Image": "../assets/images/vendors/Your_Dollar_Buys.jpg"
     }
   ]
 }

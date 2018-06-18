@@ -1,0 +1,299 @@
+<?xml version="1.0" ?>
+<!DOCTYPE cXML SYSTEM "http://xml.cXML.org/schemas/cXML/1.2.014/InvoiceDetail.dtd">
+<cXML payloadID="2018-01-17T14:06:00-05:00-1@kaplanco.com" xml:lang="en-US" timestamp="2018-01-17T14:06:00-05:00">
+	<Header>
+		<From>
+			<Credential domain="DUNS">
+				<Identity>071568984</Identity>
+			</Credential>
+		</From>
+		<To>
+			<Credential domain="DUNS">
+				<Identity>OrderCloud API</Identity>
+			</Credential>
+		</To>
+		<Sender>
+			<Credential domain="DUNS">
+				<Identity>071568984</Identity>
+				<SharedSecret>?B7u5S4on2</SharedSecret>
+			</Credential>
+			<UserAgent>Kaplanco.com</UserAgent>
+		</Sender>
+	</Header>
+	<Request deploymentMode="production">
+		<InvoiceDetailRequest>
+			<InvoiceDetailRequestHeader invoiceID="00046704" purpose="standard" operation="new" invoiceDate="2018-01-10">
+				<InvoiceDetailHeaderIndicator />
+				<InvoiceDetailLineIndicator isTaxInLine="yes" isShippingInLine="yes" />
+				<InvoicePartner>
+					<Contact role="soldTo" addressID="91004522-1">
+						<Name xml:lang="en-US">BOULDER HILL ELEM</Name>
+						<PostalAddress name="default">
+							<Street>163 BOULDER HILL PASS</Street>
+							<City>MONTGOMERY</City>
+							<State>IL</State>
+							<PostalCode>60538-2300</PostalCode>
+							<Country isoCountryCode="US">United States</Country>
+						</PostalAddress>
+						<Email>hkrause@sd308.org</Email>
+						<Phone>
+							<TelephoneNumber>
+								<CountryCode isoCountryCode="US">1</CountryCode>
+								<AreaOrCityCode>630</AreaOrCityCode>
+								<Number>8976768</Number>
+							</TelephoneNumber>
+						</Phone>
+					</Contact>
+				</InvoicePartner>
+				<InvoicePartner>
+					<Contact role="billTo" addressID="91334211-2">
+						<Name xml:lang="en-US">ADOPT A CLASSROOM</Name>
+						<PostalAddress name="default">
+							<Street>110 N 5TH ST 8TH FL</Street>
+							<City>MINNEAPOLIS</City>
+							<State>MN</State>
+							<PostalCode>55403-1608</PostalCode>
+							<Country isoCountryCode="US">United States</Country>
+						</PostalAddress>
+						<Email>hkrause@sd308.org</Email>
+						<Phone>
+							<TelephoneNumber>
+								<CountryCode isoCountryCode="US">1</CountryCode>
+								<AreaOrCityCode>877</AreaOrCityCode>
+								<Number>4447666</Number>
+							</TelephoneNumber>
+						</Phone>
+					</Contact>
+				</InvoicePartner>
+				<InvoicePartner>
+					<Contact role="remitTo">
+						<Name xml:lang="en-US">Kaplan Early Learning Co.</Name>
+						<PostalAddress name="billing department">
+							<Street>P.O. Box 890575</Street>
+							<City>Charlotte</City>
+							<State>NC</State>
+							<PostalCode>28289-0575</PostalCode>
+							<Country isoCountryCode="US">United States</Country>
+						</PostalAddress>
+						<Email name="default">info@kaplanco.com</Email>
+						<Phone name="default">
+							<TelephoneNumber>
+								<CountryCode isoCountryCode="US">1</CountryCode>
+								<AreaOrCityCode>800</AreaOrCityCode>
+								<Number>334-2014</Number>
+							</TelephoneNumber>
+						</Phone>
+						<Fax name="default">
+							<TelephoneNumber>
+								<CountryCode isoCountryCode="US">1</CountryCode>
+								<AreaOrCityCode>800</AreaOrCityCode>
+								<Number>452-7526</Number>
+							</TelephoneNumber>
+						</Fax>
+					</Contact>
+				</InvoicePartner>
+				<PaymentTerm payInNumberOfDays="30" />
+			</InvoiceDetailRequestHeader>
+			<InvoiceDetailOrder>
+				<InvoiceDetailOrderInfo>
+					<OrderReference orderID="3SwfMwDut0OMTSro5eo5dw" orderDate="2018-01-10">
+						<DocumentReference payloadID="269e8c19-16fb-4197-9db1-28bbc768b4ef" />
+					</OrderReference>
+				</InvoiceDetailOrderInfo>
+				<InvoiceDetailItem invoiceLineNumber="1" quantity="1">
+					<UnitOfMeasure>EA</UnitOfMeasure>
+					<UnitPrice>
+						<Money currency="USD">10.36</Money>
+					</UnitPrice>
+					<InvoiceDetailItemReference lineNumber="1">
+						<ItemID>
+							<SupplierPartID>91583</SupplierPartID>
+						</ItemID>
+						<Description xml:lang="en-US">CONVERSATION CUBES</Description>
+					</InvoiceDetailItemReference>
+					<SubtotalAmount>
+						<Money currency="USD">10.36</Money>
+					</SubtotalAmount>
+					<Tax>
+						<Money currency="USD">0</Money>
+						<Description xml:lang="en-US">total item tax</Description>
+						<TaxDetail purpose="tax" category="State sales tax" percentageRate="0">
+							<TaxableAmount>
+								<Money currency="USD">10.36</Money>
+							</TaxableAmount>
+							<TaxAmount>
+								<Money currency="USD">0</Money>
+							</TaxAmount>
+						</TaxDetail>
+					</Tax>
+					<InvoiceDetailLineShipping>
+						<InvoiceDetailShipping>
+							<Contact role="shipFrom">
+								<Name xml:lang="en-US">Kaplan Early Learning Co.</Name>
+								<PostalAddress name="default">
+									<Street>1310 Lewisville Clemmons Rd</Street>
+									<Street>PO Box 609</Street>
+									<City>Lewisville</City>
+									<State>NC</State>
+									<PostalCode>27023-0609</PostalCode>
+									<Country isoCountryCode="US">United States</Country>
+								</PostalAddress>
+								<Email name="default">info@kaplanco.com</Email>
+								<Phone name="default">
+									<TelephoneNumber>
+										<CountryCode isoCountryCode="US">1</CountryCode>
+										<AreaOrCityCode>800</AreaOrCityCode>
+										<Number>334-2014</Number>
+									</TelephoneNumber>
+								</Phone>
+								<Fax name="default">
+									<TelephoneNumber>
+										<CountryCode isoCountryCode="US">1</CountryCode>
+										<AreaOrCityCode>800</AreaOrCityCode>
+										<Number>452-7526</Number>
+									</TelephoneNumber>
+								</Fax>
+							</Contact>
+							<Contact role="shipTo" addressID="91004522-1">
+								<Name xml:lang="en-US">BOULDER HILL ELEM</Name>
+								<PostalAddress name="default">
+									<Street>163 BOULDER HILL PASS</Street>
+									<City>MONTGOMERY</City>
+									<State>IL</State>
+									<PostalCode>60538-2300</PostalCode>
+									<Country isoCountryCode="US">United States</Country>
+								</PostalAddress>
+								<Email>hkrause@sd308.org</Email>
+								<Phone>
+									<TelephoneNumber>
+										<CountryCode isoCountryCode="US">1</CountryCode>
+										<AreaOrCityCode>630</AreaOrCityCode>
+										<Number>8976768</Number>
+									</TelephoneNumber>
+								</Phone>
+							</Contact>
+						</InvoiceDetailShipping>
+						<Money currency="USD">1.55</Money>
+					</InvoiceDetailLineShipping>
+					<GrossAmount>
+						<Money currency="USD">11.91</Money>
+					</GrossAmount>
+					<NetAmount>
+						<Money currency="USD">11.91</Money>
+					</NetAmount>
+				</InvoiceDetailItem>
+				<InvoiceDetailItem invoiceLineNumber="2" quantity="1">
+					<UnitOfMeasure>EA</UnitOfMeasure>
+					<UnitPrice>
+						<Money currency="USD">29.56</Money>
+					</UnitPrice>
+					<InvoiceDetailItemReference lineNumber="2">
+						<ItemID>
+							<SupplierPartID>91626</SupplierPartID>
+						</ItemID>
+						<Description xml:lang="en-US">SOCIAL SKILLS BOARD GAME</Description>
+					</InvoiceDetailItemReference>
+					<SubtotalAmount>
+						<Money currency="USD">29.56</Money>
+					</SubtotalAmount>
+					<Tax>
+						<Money currency="USD">0</Money>
+						<Description xml:lang="en-US">total item tax</Description>
+						<TaxDetail purpose="tax" category="State sales tax" percentageRate="0">
+							<TaxableAmount>
+								<Money currency="USD">29.56</Money>
+							</TaxableAmount>
+							<TaxAmount>
+								<Money currency="USD">0</Money>
+							</TaxAmount>
+						</TaxDetail>
+					</Tax>
+					<InvoiceDetailLineShipping>
+						<InvoiceDetailShipping>
+							<Contact role="shipFrom">
+								<Name xml:lang="en-US">Kaplan Early Learning Co.</Name>
+								<PostalAddress name="default">
+									<Street>1310 Lewisville Clemmons Rd</Street>
+									<Street>PO Box 609</Street>
+									<City>Lewisville</City>
+									<State>NC</State>
+									<PostalCode>27023-0609</PostalCode>
+									<Country isoCountryCode="US">United States</Country>
+								</PostalAddress>
+								<Email name="default">info@kaplanco.com</Email>
+								<Phone name="default">
+									<TelephoneNumber>
+										<CountryCode isoCountryCode="US">1</CountryCode>
+										<AreaOrCityCode>800</AreaOrCityCode>
+										<Number>334-2014</Number>
+									</TelephoneNumber>
+								</Phone>
+								<Fax name="default">
+									<TelephoneNumber>
+										<CountryCode isoCountryCode="US">1</CountryCode>
+										<AreaOrCityCode>800</AreaOrCityCode>
+										<Number>452-7526</Number>
+									</TelephoneNumber>
+								</Fax>
+							</Contact>
+							<Contact role="shipTo" addressID="91004522-1">
+								<Name xml:lang="en-US">BOULDER HILL ELEM</Name>
+								<PostalAddress name="default">
+									<Street>163 BOULDER HILL PASS</Street>
+									<City>MONTGOMERY</City>
+									<State>IL</State>
+									<PostalCode>60538-2300</PostalCode>
+									<Country isoCountryCode="US">United States</Country>
+								</PostalAddress>
+								<Email>hkrause@sd308.org</Email>
+								<Phone>
+									<TelephoneNumber>
+										<CountryCode isoCountryCode="US">1</CountryCode>
+										<AreaOrCityCode>630</AreaOrCityCode>
+										<Number>8976768</Number>
+									</TelephoneNumber>
+								</Phone>
+							</Contact>
+						</InvoiceDetailShipping>
+						<Money currency="USD">4.43</Money>
+					</InvoiceDetailLineShipping>
+					<GrossAmount>
+						<Money currency="USD">33.99</Money>
+					</GrossAmount>
+					<NetAmount>
+						<Money currency="USD">33.99</Money>
+					</NetAmount>
+				</InvoiceDetailItem>
+			</InvoiceDetailOrder>
+			<InvoiceDetailSummary>
+				<SubtotalAmount>
+					<Money currency="USD">39.92</Money>
+				</SubtotalAmount>
+				<Tax>
+					<Money currency="USD">0.00</Money>
+					<Description xml:lang="en-US">total tax</Description>
+					<TaxDetail purpose="tax" category="State sales tax">
+						<TaxableAmount>
+							<Money currency="USD">39.92</Money>
+						</TaxableAmount>
+						<TaxAmount>
+							<Money currency="USD">0.00</Money>
+						</TaxAmount>
+					</TaxDetail>
+				</Tax>
+				<ShippingAmount>
+					<Money currency="USD">5.98</Money>
+				</ShippingAmount>
+				<GrossAmount>
+					<Money currency="USD">45.90</Money>
+				</GrossAmount>
+				<NetAmount>
+					<Money currency="USD">45.90</Money>
+				</NetAmount>
+				<DueAmount>
+					<Money currency="USD">45.90</Money>
+				</DueAmount>
+			</InvoiceDetailSummary>
+		</InvoiceDetailRequest>
+	</Request>
+</cXML>

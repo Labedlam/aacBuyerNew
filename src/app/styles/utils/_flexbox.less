@@ -1,8 +1,8 @@
 .make-flex-grid(@suffix) {
-  &.inline@{suffix} {
+  .inline@{suffix} {
     display: inline-flex;
   }
-  &.horizontal@{suffix} {
+  .horizontal@{suffix} {
     display: flex;
     flex-direction: row;
     &.gutter@{suffix} {
@@ -18,7 +18,7 @@
       }
     }
   }
-  &.vertical@{suffix} {
+  .vertical@{suffix} {
     display: flex;
     flex-direction: column;
     &.gutter@{suffix} {
@@ -34,10 +34,10 @@
       }
     }
   }
-  &.wrap@{suffix} {
+  .wrap@{suffix} {
     flex-wrap: wrap;
   }
-  &.no-wrap@{suffix} {
+  .no-wrap@{suffix} {
     flex-wrap: nowrap;
   }
   .flex@{suffix} {
@@ -51,48 +51,48 @@
     flex: none;
   }
   //reverse
-  &.horizontal-reverse@{suffix},
-  &.vertical-reverse@{suffix} {
+  .horizontal-reverse@{suffix},
+  .vertical-reverse@{suffix} {
     display: flex;
   }
-  &.horizontal-reverse@{suffix} {
+  .horizontal-reverse@{suffix} {
     flex-direction: row-reverse;
   }
-  &.vertical-reverse@{suffix} {
+  .vertical-reverse@{suffix} {
     flex-direction: column-reverse;
   }
-  &.wrap-reverse@{suffix} {
+  .wrap-reverse@{suffix} {
     flex-wrap: wrap-reverse;
   }
   //alignment - cross axis
-  &.start@{suffix} {
+  .start@{suffix} {
     align-items: flex-start;
   }
-  &.center@{suffix},
-  &.center-center@{suffix} {
+  .center@{suffix},
+  .center-center@{suffix} {
     align-items: center;
   }
-  &.end@{suffix} {
+  .end@{suffix} {
     align-items: flex-end;
   }
-  &.baseline@{suffix} {
+  .baseline@{suffix} {
     align-items: baseline;
   }
   //alignment - main axis
-  &.start-justified@{suffix} {
+  .start-justified@{suffix} {
     justify-content: flex-start;
   }
-  &.center-justified@{suffix},
-  &.center-center@{suffix} {
+  .center-justified@{suffix},
+  .center-center@{suffix} {
     justify-content: center;
   }
-  &.end-justified@{suffix} {
+  .end-justified@{suffix} {
     justify-content: flex-end;
   }
-  &.around-justified@{suffix} {
+  .around-justified@{suffix} {
     justify-content: space-around;
   }
-  &.between-justified@{suffix} {
+  .between-justified@{suffix} {
     justify-content: space-between;
   }
   //self alignment
@@ -112,19 +112,19 @@
     align-self: baseline;
   }
   //multi-line alignment - main axis
-  &.start-aligned@{suffix} {
+  .start-aligned@{suffix} {
     align-content: flex-start;
   }
-  &.end-aligned@{suffix} {
+  .end-aligned@{suffix} {
     align-content: flex-end;
   }
-  &.center-aligned@{suffix} {
+  .center-aligned@{suffix} {
     align-content: center;
   }
-  &.between-aligned@{suffix} {
+  .between-aligned@{suffix} {
     align-content: space-between;
   }
-  &.around-aligned@{suffix} {
+  .around-aligned@{suffix} {
     justify-content: space-around;
   }
   // flex factors
@@ -224,6 +224,22 @@
     bottom: 0;
     left: 0;
   }
+  .row-flex@{suffix} {
+    display: flex;
+    flex-flow: row wrap;
+    >[class^="col-"] {
+      display: flex;
+      flex-direction: column;
+    }
+    .row-flex-inner {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 auto;
+      // IE11 image height hack
+      // https://github.com/philipwalton/flexbugs/issues/75
+      min-height: 1%;
+    }
+  }
 }
 
 .oc-flex-layout() {
@@ -278,8 +294,7 @@
   }
   .flex-none {
     flex: none;
-  }
-  //reverse
+  } //reverse
   &.horizontal-reverse,
   &.vertical-reverse {
     display: flex;
@@ -292,8 +307,7 @@
   }
   &.wrap-reverse {
     flex-wrap: wrap-reverse;
-  }
-  //alignment - cross axis
+  } //alignment - cross axis
   &.start {
     align-items: flex-start;
   }
@@ -306,8 +320,7 @@
   }
   &.baseline {
     align-items: baseline;
-  }
-  //alignment - main axis
+  } //alignment - main axis
   &.start-justified {
     justify-content: flex-start;
   }
@@ -323,8 +336,7 @@
   }
   &.between-justified {
     justify-content: space-between;
-  }
-  //self alignment
+  } //self alignment
   .self-start {
     align-self: flex-start;
   }
@@ -339,8 +351,7 @@
   }
   .self-baseline {
     align-self: baseline;
-  }
-  //multi-line alignment - main axis
+  } //multi-line alignment - main axis
   &.start-aligned {
     align-content: flex-start;
   }
@@ -355,8 +366,7 @@
   }
   &.around-aligned {
     justify-content: space-around;
-  }
-  // flex factors
+  } // flex factors
   .flex-grow {
     flex-grow: 1;
   }
@@ -453,17 +463,21 @@
     bottom: 0;
     left: 0;
   }
-  .make-flex-grid(~'');
-  @media(max-width: @screen-xs-max) {
-    .make-flex-grid(-xs);
-  }
-  @media(min-width:@screen-sm-min) and (max-width:@screen-sm-max) {
-    .make-flex-grid(-sm);
-  }
-  @media(min-width:@screen-md-min) and (max-width:@screen-md-max) {
-    .make-flex-grid(-md);
-  }
-  @media(min-width:@screen-lg-min) {
-    .make-flex-grid(-lg);
-  }
+}
+
+.make-flex-grid(~'');
+@media(max-width: @screen-xs-max) {
+  .make-flex-grid(-xs);
+}
+
+@media(min-width:@screen-sm-min) {
+  .make-flex-grid(-sm);
+}
+
+@media(min-width:@screen-md-min) {
+  .make-flex-grid(-md);
+}
+
+@media(min-width:@screen-lg-min) {
+  .make-flex-grid(-lg);
 }
