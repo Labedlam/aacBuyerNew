@@ -1,7 +1,7 @@
 {
   "appname": "AdoptAClassroom.org",
   "scope": ["Shopper","BuyerImpersonation","AddressAdmin", "AddressReader", "ApprovalRuleAdmin", "ApprovalRuleReader", "BuyerAdmin BuyerUserAdmin", "BuyerUserReader", "CategoryAdmin", "CategoryReader", "CostCenterAdmin", "CostCenterReader", "CreditCardAdmin", "CreditCardReader", "DevCenterWebHookAdmin", "FullAccess", "InventoryAdmin", "MeAddressAdmin", "MeAdmin","MeCreditCardAdmin", "MeXpAdmin", "OrderAdmin", "OrderReader", "OverrideShipping", "OverrideTax", "OverrideUnitPrice", "PermissionAdmin", "PriceScheduleAdmin", "PriceScheduleReader", "ProductAdmin", "ProductAssignmentAdmin", "ProductReader", "PromotionAdmin", "PromotionReader", "SetSecurityProfile", "SpendingAccountAdmin", "SpendingAccountReader", "UnsubmittedOrderReader", "UserGroupAdmin", "UserGroupReader", "BuyerReader"],
-  "clientid": "AA3612AD-098D-44E1-8D5D-41AE1994EEFA",
+  "clientid": "2EB0F70B-378B-4676-98E5-43F13B673C8C",
   "buyerid": "AACBuyer",
   "catalogid": "AACBuyer",
   "clientsecret": "myclientsecret",
@@ -44,9 +44,19 @@
       "Image": "../assets/images/vendors/Carson_Dellosa.png"
     },
     {
+      "Name": "Fun Express",
+      "Value": "Fun Express",
+      "Image": "../assets/images/vendors/Fun_Express.png"
+    },
+    {
       "Name": "HoverCam",
       "Value": "HoverCam",
       "Image": "../assets/images/vendors/HoverCam.png"
+    },
+    {
+      "Name": "HUE",
+      "Value": "HUE",
+      "Image": "../assets/images/vendors/HUE_Blue_logo.jpg"
     },
     {
       "Name": "LASER Classroom",
