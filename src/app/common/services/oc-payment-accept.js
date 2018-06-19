@@ -19,6 +19,12 @@ function ccPaymentService($http, $q, $exceptionHandler, OrderCloudSDK, ocAuthNet
                                     if(data.ResponseBody.ChargeStatus === '1') {
                                         return OrderCloudSDK.Payments.Patch('outgoing', order.ID, paymentData.ID, {
                                             Accepted: true
+                                        }).then( function() {
+                                            var response = {
+                                                ChargeStatus: data.ResponseBody.ChargeStatus,
+                                                Message: message
+                                            };
+                                            return response;
                                         });
                                     } else {
                                         var message;
