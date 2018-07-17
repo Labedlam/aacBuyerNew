@@ -148,13 +148,6 @@ function VendorShippingCriteria() {
 			}
 		},
 		{
-			name: 'Bazillions',
-			minOrderAmount: 0,
-			shippingCostFunc: function(order) {
-				return 1.5 + 1*order.itemCount;
-			}
-		},
-		{
 			name: 'Beckers',
 			minOrderAmount: 0,
 			shippingCostFunc: function(order) {
@@ -190,24 +183,10 @@ function VendorShippingCriteria() {
 			}
 		},
 		{
-			name: 'Hovercam',
-			minOrderAmount: 0,
-			shippingCostFunc: function(order) {
-				return 0.15*order.amount;
-			}
-		},
-		{
 			name: 'Kaplan',
 			minOrderAmount: 0,
 			shippingCostFunc: function(order) {
 				return 0.15*order.amount;
-			}
-		},
-		{
-			name: 'Rocketbook',
-			minOrderAmount: 0,
-			shippingCostFunc: function(order) {
-				return 7;
 			}
 		},
 		{
@@ -227,13 +206,6 @@ function VendorShippingCriteria() {
 			minOrderAmount: 0,
 			shippingCostFunc: function(order) {
 				return 5.95 + 0.15*order.amount;
-			}
-		},
-		{
-			name: "Miss Humblebee's Academy",
-			minOrderAmount: 0,
-			shippingCostFunc: function(order) {
-				return 0.15*order.amount;
 			}
 		},
 		{
@@ -311,16 +283,6 @@ function VendorShippingCriteria() {
 			shippingCostFunc: function(order) {
 				return order.amount > 49.99 ? 0 : 9.95;
 			}
-		},
-		{
-			name: 'Science4us',
-			minOrderAmount: 0,
-			shippingCostFunc: function(order) {return 0;}
-		},
-		{
-			name: 'Speakaboos',
-			minOrderAmount: 0,
-			shippingCostFunc: function(order) {return 0;}
 		},
 		{
 			name: 'SpellingCity',

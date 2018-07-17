@@ -29,11 +29,6 @@
       "Image": "../assets/images/vendors/Beckers.png"
     },
     {
-      "Name": "Bazillions",
-      "Value": "Bazillions",
-      "Image": "../assets/images/vendors/Bazillions.jpg"
-    },
-    {
       "Name": "Board Share",
       "Value": "Board Share",
       "Image": "../assets/images/vendors/BoardShare.png"
@@ -47,11 +42,6 @@
       "Name": "Fun Express",
       "Value": "Fun Express",
       "Image": "../assets/images/vendors/Fun_Express.png"
-    },
-    {
-      "Name": "HoverCam",
-      "Value": "HoverCam",
-      "Image": "../assets/images/vendors/HoverCam.png"
     },
     {
       "Name": "HUE",
@@ -74,11 +64,6 @@
       "Image": "../assets/images/vendors/Lorenz.png"
     },
     {
-      "Name": "Miss Humblebee's Academy",
-      "Value": "Humblebees",
-      "Image": "../assets/images/vendors/Miss_Humblebees.png"
-    },
-    {
       "Name": "OOLY",
       "Value": "OOLY",
       "Image": "../assets/images/vendors/OOLY.jpg"
@@ -97,16 +82,6 @@
       "Name": "Scholastic Classroom Magazines",
       "Value": "ClassroomMagazines",
       "Image": "../assets/images/vendors/Scholastic_Classroom_Magazines.jpg"
-    },
-    {
-      "Name": "Science4us",
-      "Value": "Science4us",
-      "Image": "../assets/images/vendors/Science4Us.png"
-    },
-    {
-      "Name": "Speakaboos",
-      "Value": "Speakaboos",
-      "Image": "../assets/images/vendors/Speakaboos.png"
     },
     {
       "Name": "Spelling City",
