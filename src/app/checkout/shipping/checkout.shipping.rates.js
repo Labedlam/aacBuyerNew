@@ -216,6 +216,13 @@ function VendorShippingCriteria() {
 			}
 		},
 		{
+			name: 'LeeLowBooks',
+			minOrderAmount: 0,
+			shippingCostFunc: function(order) {
+				return 0.07*order.amount;
+			}
+		},
+		{
 			name: 'Office Depot',
 			minOrderAmount: 25,
 			shippingCostFunc: function(order) {
