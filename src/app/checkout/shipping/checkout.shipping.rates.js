@@ -262,6 +262,17 @@ function VendorShippingCriteria() {
 				if (order.amount >= 2500.00)
 					return 0.10*order.amount;
 			}
+		},
+		{
+			name: 'GeniusGames',
+			shippingCostFunc: function(order) {
+				var cost = 0;
+				if (order.itemCount <= 2)
+					cost = 5.99;
+				if (order.itemCount <= 5)
+					cost = 3.99;
+			}
+				return cost;
 		},		
 		{
 			name: 'Ooly',
