@@ -265,14 +265,15 @@ function VendorShippingCriteria() {
 		},
 		{
 			name: 'GeniusGames',
+			minOrderAmount: 0,
 			shippingCostFunc: function(order) {
-				var cost = 0;
 				if (order.itemCount <= 2)
-					cost = 5.99;
+					return 5.99;
 				if (order.itemCount <= 5)
-					cost = 3.99;
+					return 3.99;
+				if (order.itemCount >= 6)
+					return 0;
 			}
-				return cost;
 		},		
 		{
 			name: 'Ooly',
