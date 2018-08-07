@@ -223,7 +223,7 @@ function VendorShippingCriteria() {
 			}
 		},
 		{
-			name: 'ReallyGoodStuff',
+			name: 'Really Good Stuff',
 			minOrderAmount: 0,
 			shippingCostFunc: function(order) {
 				if (order.amount < 30)
