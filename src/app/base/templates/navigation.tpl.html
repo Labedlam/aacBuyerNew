@@ -4,7 +4,7 @@
       <div class="c-mainnav__group--left">
         <!--BRAND-->
         <div class="c-mainnav__item c-mainnav__brand">
-          <a class="mainnav-nav-home"  class="exitstore">
+          <a ui-sref="home" class="mainnav-nav-home" class="exitstore">
             <span class="sr-only">{{application.name}}</span>
             <img src="/assets/images/aac-logo.png" />
           </a>
@@ -52,10 +52,15 @@
         </a>
       </div>
       <div class="c-topnav__item c-topnav__browse">
-          <a ui-sref="home">
-            <span>Marketplace</span>
-          </a>
+        <a ui-sref="home">
+          <span>Marketplace</span>
+        </a>
+      </div>
+      <div ng-hide="application.$state.is('home')" class="c-topnav__item c-topnav__browse">
+        <div class="c-topnav__search">
+          <ordercloud-product-search></ordercloud-product-search>
         </div>
+      </div>
     </div>
     <div class="c-topnav__group--right">
       <!--CART-->

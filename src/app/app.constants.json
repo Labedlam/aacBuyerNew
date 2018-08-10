@@ -29,11 +29,6 @@
       "Image": "../assets/images/vendors/Beckers.png"
     },
     {
-      "Name": "Bazillions",
-      "Value": "Bazillions",
-      "Image": "../assets/images/vendors/Bazillions.jpg"
-    },
-    {
       "Name": "Board Share",
       "Value": "Board Share",
       "Image": "../assets/images/vendors/BoardShare.png"
@@ -44,9 +39,14 @@
       "Image": "../assets/images/vendors/Carson_Dellosa.png"
     },
     {
-      "Name": "HoverCam",
-      "Value": "HoverCam",
-      "Image": "../assets/images/vendors/HoverCam.png"
+      "Name": "Fun Express",
+      "Value": "Fun Express",
+      "Image": "../assets/images/vendors/Fun_Express.png"
+    },
+    {
+      "Name": "HUE",
+      "Value": "HUE",
+      "Image": "../assets/images/vendors/HUE_Blue_logo.jpg"
     },
     {
       "Name": "LASER Classroom",
@@ -62,11 +62,6 @@
       "Name": "Lorenz Educational Press",
       "Value": "Lorenz",
       "Image": "../assets/images/vendors/Lorenz.png"
-    },
-    {
-      "Name": "Miss Humblebee's Academy",
-      "Value": "Humblebees",
-      "Image": "../assets/images/vendors/Miss_Humblebees.png"
     },
     {
       "Name": "OOLY",
@@ -87,16 +82,6 @@
       "Name": "Scholastic Classroom Magazines",
       "Value": "ClassroomMagazines",
       "Image": "../assets/images/vendors/Scholastic_Classroom_Magazines.jpg"
-    },
-    {
-      "Name": "Science4us",
-      "Value": "Science4us",
-      "Image": "../assets/images/vendors/Science4Us.png"
-    },
-    {
-      "Name": "Speakaboos",
-      "Value": "Speakaboos",
-      "Image": "../assets/images/vendors/Speakaboos.png"
     },
     {
       "Name": "Spelling City",
