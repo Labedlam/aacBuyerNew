@@ -44,6 +44,11 @@
       "Image": "../assets/images/vendors/Fun_Express.png"
     },
     {
+      "Name": "Genius Games ",
+      "Value": "Genius Games ",
+      "Image": "../assets/images/vendors/geniusgames.png"
+    },
+    {
       "Name": "HUE",
       "Value": "HUE",
       "Image": "../assets/images/vendors/HUE_Blue_logo.jpg"
@@ -57,6 +62,11 @@
       "Name": "Learning A-Z",
       "Value": "learning AZ",
       "Image": "../assets/images/vendors/Learning_A_Z.png"
+    },
+    {
+      "Name": "Lee & Low Books",
+      "Value": "leeLowBooks",
+      "Image": "../assets/images/vendors/leeandlow.png"
     },
     {
       "Name": "Lorenz Educational Press",
