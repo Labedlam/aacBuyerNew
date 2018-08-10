@@ -176,13 +176,6 @@ function VendorShippingCriteria() {
 			}
 		},
 		{
-			name: 'Rocketbook',
-			minOrderAmount: 0,
-			shippingCostFunc: function(order) {
-				return 7;
-			}
-		},
-		{
 			name: 'Kaplan',
 			minOrderAmount: 0,
 			shippingCostFunc: function(order) {

@@ -44,6 +44,11 @@
       "Image": "../assets/images/vendors/Fun_Express.png"
     },
     {
+      "Name": "Genius Games ",
+      "Value": "Genius Games ",
+      "Image": "../assets/images/vendors/geniusgames.png"
+    },
+    {
       "Name": "HUE",
       "Value": "HUE",
       "Image": "../assets/images/vendors/HUE_Blue_logo.jpg"
@@ -59,6 +64,11 @@
       "Image": "../assets/images/vendors/Learning_A_Z.png"
     },
     {
+      "Name": "Lee & Low Books",
+      "Value": "leeLowBooks",
+      "Image": "../assets/images/vendors/leeandlow.png"
+    },
+    {
       "Name": "Lorenz Educational Press",
       "Value": "Lorenz",
       "Image": "../assets/images/vendors/Lorenz.png"
@@ -67,11 +77,6 @@
       "Name": "OOLY",
       "Value": "OOLY",
       "Image": "../assets/images/vendors/OOLY.jpg"
-    },
-    {
-      "Name": "Rocketbook",
-      "Value": "Rocketbook",
-      "Image": "../assets/images/vendors/Rocketbook.png"
     },
     {
       "Name": "Scholastic",
