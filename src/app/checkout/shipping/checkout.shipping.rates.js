@@ -183,11 +183,16 @@ function VendorShippingCriteria() {
 			}
 		},
 		{
-			name: 'Laser Classroom',
+			name: 'Laser',
 			minOrderAmount: 0,
 			shippingCostFunc: function(order) {
 				return 9.99;
 			}
+		},
+		{
+			name: 'LearnersEdge',
+			minOrderAmount: 0,
+			shippingCostFunc: function(order) {return 0;}
 		},
 		{
 			name: 'HUE',
