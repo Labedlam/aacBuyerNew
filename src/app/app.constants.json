@@ -64,6 +64,11 @@
       "Image": "../assets/images/vendors/Learning_A_Z.png"
     },
     {
+      "Name": "Learners Edge",
+      "Value": "Learner's Edge",
+      "Image": "../assets/images/vendors/learnersEdge.jpg"
+    },
+    {
       "Name": "Lee & Low Books",
       "Value": "Lee & Low Books",
       "Image": "../assets/images/vendors/leeandlow.png"
