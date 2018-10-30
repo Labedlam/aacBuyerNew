@@ -19,7 +19,8 @@ function punchoutProductName() {
             'kaplantest': 'Description',
             'reallygoodstufftest': 'Description',
             'schoolspecialitytest': 'Description',
-            'freyscientifictest': 'Description'
+            'freyscientifictest': 'Description',
+            'lakeshorelearning':'Description'
         };
 
         return xp[map[punchoutName]];
@@ -37,12 +38,15 @@ function punchoutLineItemVendor() {
             'reallygoodstuff': 'Really Good Stuff',
             'schoolspeciality': 'School Specialty',
             'freyscientific': 'School Specialy Frey Scientific',
+            'lakeshorelearning': 'Lakeshore Learning',
             'officedepottest' : 'Office Depot Test',
             'bestbuytest' : 'Best Buy Test',
             'kaplantest': 'Kaplan Test',
             'reallygoodstufftest': 'Really Good Stuff Test',
             'schoolspecialitytest': 'School Speciality Test',
-            'freyscientifictest': 'Frey Scientific Test'
+            'freyscientifictest': 'Frey Scientific Test',
+            'lakeshorelearningtest': 'Lakeshore Learning Test',
+         
         };
 
         return map[punchoutName];
