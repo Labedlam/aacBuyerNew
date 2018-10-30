@@ -82,10 +82,15 @@ function getConstants() {
             result.apiurl = 'https://qaapi.ordercloud.io';
             result.devapiurl = 'https://qaapi.ordercloud.io';
             break;
+        case 'dev':
+            result.authurl =  'https://auth.ordercloud.io';
+            result.apiurl = 'https://api.ordercloud.io';
+            result.devapiurl = 'https://aacbuyer-dev.herokuapp.com/';
+            break;
         case 'staging':
-            result.authurl = 'https://stagingauth.ordercloud.io';
-            result.apiurl = 'https://stagingapi.ordercloud.io';
-            result.devapiurl = 'https://stagingapi.ordercloud.io';
+            result.authurl =  'https://auth.ordercloud.io';
+            result.apiurl = 'https://api.ordercloud.io';
+            result.devapiurl = 'https://aacbuyer-dev.herokuapp.com/';
             break;
         default:
             result.authurl = 'https://auth.ordercloud.io';

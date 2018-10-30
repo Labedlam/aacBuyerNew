@@ -35,7 +35,7 @@ function AutoLoginController($state, $stateParams, $exceptionHandler, OrderCloud
     vm.form = 'login';
     vm.submit = function() {
         OrderCloudSDK.SetToken(vm.token);
-        $state.go('productBrowse.products', {});
+        $state.go('home', {});
     };
 
     var loginTest = function(response) {

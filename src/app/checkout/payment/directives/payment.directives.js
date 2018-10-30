@@ -172,7 +172,7 @@ function PaymentSpendingAccountController($scope, $rootScope, toastr, OrderCloud
         $scope.payment.Accepted = true;
         $scope.payment.SpendingAccountID = scope.spendingAccount.ID;
         $scope.payment.SpendingAccount = scope.spendingAccount;
-        if($scope.payment.CreditCardID)  delete $scope.payment.CreditCardID;
+        if ($scope.payment.CreditCardID && $scope.order.Status == 'Unsubmitted')  delete $scope.payment.CreditCardID;
         $scope.updatingSpendingAccountPayment = OrderCloudSDK.Payments.Delete('outgoing', $scope.order.ID, $scope.payment.ID)
             .then(function () {
                 OrderCloudSDK.Payments.Create('outgoing', $scope.order.ID, $scope.payment)
@@ -385,7 +385,7 @@ function OCPayments() {
     }
 }
 
-function PaymentsController($rootScope, $scope, $exceptionHandler, $q, toastr, OrderCloudSDK, CheckoutPaymentService, CheckoutConfig, buyerid) {
+function PaymentsController($rootScope, $scope, $exceptionHandler, $q, $state, toastr, OrderCloudSDK, CheckoutPaymentService, CheckoutConfig, buyerid) {
     if (!$scope.methods) $scope.methods = CheckoutConfig.AvailablePaymentMethods;
 
     OrderCloudSDK.Orders.Get('outgoing', $scope.order.ID).then(function(orderData) {
