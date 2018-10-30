@@ -182,13 +182,20 @@ function VendorShippingCriteria() {
 				return 0.15*order.amount;
 			}
 		},
+		{
+			name: 'Laser',
 			minOrderAmount: 0,
 			shippingCostFunc: function(order) {
 				return 9.99;
 			}
 		},
 		{
-			name: 'Laser Classroom',
+			name: 'LearnersEdge',
+			minOrderAmount: 0,
+			shippingCostFunc: function(order) {return 0;}
+		},
+		{
+			name: 'HUE',
 			minOrderAmount: 0,
 			shippingCostFunc: function(order) {
 				return 9.99;
@@ -212,7 +219,7 @@ function VendorShippingCriteria() {
 			shippingCostFunc: function(order) {
 				return 0.07*order.amount;
 			}
-		},		
+		},
 		{
 			name: 'Office Depot',
 			minOrderAmount: 25,
@@ -234,7 +241,6 @@ function VendorShippingCriteria() {
 					return 0.14*order.amount;
 			}
 		},
-		
 		{
 			name: 'FunExpress',
 			minOrderAmount: 0,
