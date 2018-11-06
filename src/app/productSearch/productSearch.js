@@ -105,7 +105,7 @@ function ProductSearchDirectiveController($state, OrderCloudSDK) {
     vm.onHardEnter = function(searchTerm) {
         $state.go('productSearchResults', {
             searchTerm: searchTerm
-        });
+        }, {reload: true});
     };
 }
 
