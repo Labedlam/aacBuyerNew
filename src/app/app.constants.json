@@ -5,7 +5,7 @@
   "buyerid": "AACBuyer",
   "catalogid": "AACBuyer",
   "clientsecret": "myclientsecret",
-  "environment": "dev",
+  "environment": "staging",
   "defaultstate": "home",
   "anonymous": false,
   "bootswatchtheme": null,
