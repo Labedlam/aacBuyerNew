@@ -307,24 +307,6 @@ function VendorShippingCriteria() {
 			name: 'YourDollar',
 			minOrderAmount: 0,
 			shippingCostFunc: function(order) {return 0;}
-		},
-		{
-			name: 'Lakeshore Learning Test',
-			minOrderAmount: 0,
-			shippingCostFunc: function(order) {
-				var fifteenPStates = ['AK' 'HI', 'AS', 'FM', 'GU', 'MH', 'MP'];
-				var twentyPStates = ['AL', 'AZ', 'AR', 'CA', 'CO', 'CT']; 
-				
-				if(fifteenPStates.indexOf(order.state.toUpperCase()) > -1){
-					return order.amount*0.15;
-				}
-				else if(twentyPStates.indexOf(order.state.toUpperCase()) > -1){
-					return order.amount*0.20;
-				}
-				else{
-					
-				}
-			}
 		}
 	];
 
@@ -428,8 +410,7 @@ function VendorShippingCriteria() {
 
         var shippingCost = shippingCalculator({
             amount: amount,
-            itemCount: itemCount, 
-			state: state
+            itemCount: itemCount
         });
         return shippingCost;
     };
