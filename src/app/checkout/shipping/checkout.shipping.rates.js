@@ -309,7 +309,7 @@ function VendorShippingCriteria() {
 			shippingCostFunc: function(order) {return 0;}
 		},
 		{
-			name: 'Lakeshore Learning Test',
+			name: 'Lakeshore',
 			minOrderAmount: 0,
 			shippingCostFunc: function(order) {
 				var fifteenPStates = ["AK", "HI", "AS", "FM", "GU", "MH", "MP"];
@@ -321,7 +321,6 @@ function VendorShippingCriteria() {
 				else if(twentyPStates.indexOf(order.state.toUpperCase()) > -1){
 					return order.amount*0.20;
 				}
-				console.log(this.ByDefault);
 				return 0;
 			}
 		}
