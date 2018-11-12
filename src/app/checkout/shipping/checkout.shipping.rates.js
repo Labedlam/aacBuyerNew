@@ -309,7 +309,7 @@ function VendorShippingCriteria() {
 			shippingCostFunc: function(order) {return 0;}
 		},
 		{
-			name: 'Lakeshore',
+			name: 'Lakeshore Learning Test',
 			minOrderAmount: 0,
 			shippingCostFunc: function(order) {
 				var fifteenPStates = ["AK", "HI", "AS", "FM", "GU", "MH", "MP"];
