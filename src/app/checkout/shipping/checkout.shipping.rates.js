@@ -312,8 +312,14 @@ function VendorShippingCriteria() {
 			name: 'Lakeshore Learning Test',
 			minOrderAmount: 0,
 			shippingCostFunc: function(order) {
-				var fifteenPStates = ["AK", "HI", "AS", "FM", "GU", "MH", "MP"];
-				var twentyPStates = ["AL", "AZ", "AR", "CA", "CO", "CT"]; 
+				//var fifteenPStates = ["AK", "HI", "AS", "FM", "GU", "MH", "MP"];
+				//var twentyPStates = ["AL", "AZ", "AR", "CA", "CO", "CT"]; 
+				var fifteenPStates = ["AL", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "ID",
+						      "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI",
+						      "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY",
+						      "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN",
+						      "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"];
+				var twentyPStates = ["AK", "HI", "AS", "FM", "GU", "MH", "MP", "PW", "PR", "VI"]; 
 				
 				if(fifteenPStates.indexOf(order.state.toUpperCase()) > -1){
 					return order.amount*0.15;
