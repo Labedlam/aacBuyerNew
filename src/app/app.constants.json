@@ -79,6 +79,16 @@
       "Image": "../assets/images/vendors/Lorenz.png"
     },
     {
+      "Name": "Learning Without Tears",
+      "Value": "Learning Without Tears",
+      "Image": "../assets/images/vendors/Learning_Without_Tears.jpg"
+    },
+    {
+      "Name": "Music & Arts",
+      "Value": "Music&Arts",
+      "Image": "../assets/images/vendors/Music_and_Arts.jpg"
+    },
+    {
       "Name": "OOLY",
       "Value": "OOLY",
       "Image": "../assets/images/vendors/OOLY.jpg"
