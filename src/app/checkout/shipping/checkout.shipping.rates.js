@@ -195,6 +195,11 @@ function VendorShippingCriteria() {
 			shippingCostFunc: function(order) {return 0;}
 		},
 		{
+			name: 'LearningWithoutTears',
+			minOrderAmount: 0,
+			shippingCostFunc: function(order) {return 0;}
+		},
+		{
 			name: 'Lorenz',
 			minOrderAmount: 0,
 			shippingCostFunc: function(order) {
