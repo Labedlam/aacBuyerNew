@@ -247,6 +247,16 @@ function VendorShippingCriteria() {
 			}
 		},
 		{
+			name: 'MusicandArts',
+			minOrderAmount: 0,
+			shippingCostFunc: function(order) {
+				if (order.amount < 25)
+					return 9.95;
+				if (order.amount >= 25)
+					return 0;
+			}
+		},
+		{
 			name: 'FunExpress',
 			minOrderAmount: 0,
 			shippingCostFunc: function(order) {
