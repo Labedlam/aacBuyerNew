@@ -59,14 +59,19 @@
       "Image": "../assets/images/vendors/Laser_Classroom.jpg"
     },
     {
+      "Name": "Learners Edge",
+      "Value": "Learner's Edge",
+      "Image": "../assets/images/vendors/learnersEdge.jpg"
+    },
+    {
       "Name": "Learning A-Z",
       "Value": "learning AZ",
       "Image": "../assets/images/vendors/Learning_A_Z.png"
     },
     {
-      "Name": "Learners Edge",
-      "Value": "Learner's Edge",
-      "Image": "../assets/images/vendors/learnersEdge.jpg"
+      "Name": "Learning Without Tears",
+      "Value": "Learning Without Tears",
+      "Image": "../assets/images/vendors/Learning_Without_Tears.jpg"
     },
     {
       "Name": "Lee & Low Books",
@@ -77,6 +82,11 @@
       "Name": "Lorenz Educational Press",
       "Value": "Lorenz",
       "Image": "../assets/images/vendors/Lorenz.png"
+    },
+    {
+      "Name": "Music & Arts",
+      "Value": "Music&Arts",
+      "Image": "../assets/images/vendors/Music_and_Arts.jpg"
     },
     {
       "Name": "OOLY",
