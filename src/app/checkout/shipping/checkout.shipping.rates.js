@@ -292,7 +292,11 @@ function VendorShippingCriteria() {
 			name: 'Ooly',
 			minOrderAmount: 0,
 			shippingCostFunc: function(order) {
-				return order.amount > 30.00 ? 0 : 4.95;
+				var threeStates = ["AK", "HI", "PR"]; 
+				if(threeStates.indexOf(order.state.toUpperCase()) > -1){
+					return 9.95;
+				}
+				return order.amount > 40.00 ? 0 : 4.95;
 			}
 		},
 		{
