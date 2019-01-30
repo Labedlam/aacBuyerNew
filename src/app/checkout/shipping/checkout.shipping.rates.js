@@ -195,6 +195,11 @@ function VendorShippingCriteria() {
 			shippingCostFunc: function(order) {return 0;}
 		},
 		{
+			name: 'LearningWithoutTears',
+			minOrderAmount: 0,
+			shippingCostFunc: function(order) {return 0;}
+		},
+		{
 			name: 'Lorenz',
 			minOrderAmount: 0,
 			shippingCostFunc: function(order) {
@@ -227,6 +232,16 @@ function VendorShippingCriteria() {
 					return 10.95;
 				if (order.amount >= 100)
 					return 0.14*order.amount;
+			}
+		},
+		{
+			name: 'MusicandArts',
+			minOrderAmount: 0,
+			shippingCostFunc: function(order) {
+				if (order.amount < 25)
+					return 9.95;
+				if (order.amount >= 25)
+					return 0;
 			}
 		},
 		{
