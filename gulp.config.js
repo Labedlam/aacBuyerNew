@@ -112,6 +112,7 @@ function getConstants() {
     if (process.env.ocscope) result.ocscope = process.env.ocscope;
     if (process.env.buyerid) result.buyerid = process.env.buyerid;
     if (process.env.catalogid) result.catalogid = process.env.catalogid;
+    if (process.env.adoptAClassromURL) result.adoptAClassromURL = process.env.adoptAClassromURL
     return result;
 }
 
