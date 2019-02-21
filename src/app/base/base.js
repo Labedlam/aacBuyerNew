@@ -69,8 +69,7 @@ function BaseConfig($stateProvider) {
 function BaseController($rootScope, $state, $http, $cookies, ProductSearch, CurrentUser, CurrentOrder, LineItemsList, LoginService, OrderCloudSDK, buyerid, environment) {
     var vm = this;
     var routeParam = $cookies.get('routeBackTo');
-    var urlStart = ((environment === 'dev') | (environment === 'staging')) ? 'https://qa-' : 'https://'
-    vm.teachersDashboard = urlStart + 'adoptaclassroom.force.com/' + routeParam + '/s/';
+    vm.teachersDashboard = ((environment === 'dev') | (environment === 'staging')) ? 'https://qa-adoptaclassroom.cs45.force.com/' + routeParam + '/s/' : 'https://adoptaclassroom.force.com/' + routeParam + '/s/'
     vm.currentUser = CurrentUser;
     vm.currentOrder = CurrentOrder;
     vm.lineItems = LineItemsList;
