@@ -65,13 +65,16 @@ function BaseConfig($stateProvider) {
     });
 }
 
-function BaseController($rootScope, $state, $http, ProductSearch, CurrentUser, CurrentOrder, LineItemsList, LoginService, OrderCloudSDK, buyerid, adoptAClassromURL) {
+function BaseController($rootScope, $state, $http, $cookies, ProductSearch, CurrentUser, CurrentOrder, LineItemsList, LoginService, OrderCloudSDK, buyerid, adoptAClassromURL) {
     var vm = this;
+    var routeParam = $cookies.get('routeBackTo');
     vm.currentUser = CurrentUser;
     vm.currentOrder = CurrentOrder;
     vm.lineItems = LineItemsList;
     vm.storeUrl;
-    vm.teachersDashboard = adoptAClassromURL;
+    // vm.teachersDashboard = adoptAClassromURL;
+    vm.teachersDashboard = 'https://adoptaclassroom.force.com/'+ routeParam + '/s/' ;
+    
 
 
     vm.getAvailableBalance = function () {
