@@ -2,6 +2,7 @@ angular.module('orderCloud', [
         'ngSanitize',
         'ngAnimate',
         'ngMessages',
+        'ngCookies',
         'ngTouch',
         'ui.tree',
         'ui.router',
