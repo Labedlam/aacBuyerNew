@@ -2,7 +2,19 @@
     <div class="row">
         <div class="col-md-8">
             <div>
-                <h4>Payment</h4>
+                <span class="billing-address">
+                    <h4>Payment</h4>
+                    <a ng-click="checkoutPayment.displayInfoPayment = !checkoutPayment.displayInfoPayment">
+                        <i class="fa fa-question-circle-o"></i>
+                    </a>
+                </span>
+
+                <div class="panel panel-default" ng-if="checkoutPayment.displayInfoPayment">
+                    <div class="panel-body">
+                        Before completing your purchase, please refer to the AdoptAClassroom.org Terms of Use about
+                        ownership of materials purchased through the AdoptAClassroom.org marketplace.
+                    </div>
+                </div>
                 <oc-payments order="base.currentOrder"></oc-payments>
             </div>
             <hr>
@@ -12,9 +24,10 @@
                     <i class="fa fa-question-circle-o"></i>
                 </a>
             </span>
-            <div class="panel panel-default" ng-show="checkoutPayment.displayInfo">
+            <div class="panel panel-default" ng-if="checkoutPayment.displayInfo">
                 <div class="panel-body">
-                    Our vendor partners will bill AdoptAClassroom.org's office (at the address below) for your order. Your order will be shipped to your school address indicated in the "Shipping To" section.                        
+                    Our vendor partners will bill AdoptAClassroom.org's office (at the address below) for your order.
+                    Your order will be shipped to your school address indicated in the "Shipping To" section.
                 </div>
             </div>
             <div class="well text-center" ng-if="!checkout.billingAddress">
@@ -38,22 +51,28 @@
                     </h3>
                 </div>
                 <div class="panel-body">
-                     <h5>Donation Account: 
-						<span ng-if = "base.availableFunds - (base.currentOrder.Subtotal + base.currentOrder.ShippingCost + (base.currentOrder.Subtotal * (checkout.shippingAddress.xp.Taxcost || 0))) > 0" >
-							({{base.availableFunds - (base.currentOrder.Subtotal + base.currentOrder.ShippingCost + (base.currentOrder.Subtotal * (checkout.shippingAddress.xp.Taxcost || 0))) | currency}}  left)
-						</span> 
-						<span ng-if = "base.availableFunds - (base.currentOrder.Subtotal + base.currentOrder.ShippingCost + (base.currentOrder.Subtotal * (checkout.shippingAddress.xp.Taxcost || 0))) <= 0" >
-							({{0 | currency}} left)
-						</span>
-						<b class="pull-right text-primary">{{base.availableFunds | currency}}</b>
-					</h5>
+                    <h5>Donation Account:
+                        <span ng-if="base.availableFunds - (base.currentOrder.Subtotal + base.currentOrder.ShippingCost + (base.currentOrder.Subtotal * (checkout.shippingAddress.xp.Taxcost || 0))) > 0">
+                            ({{base.availableFunds - (base.currentOrder.Subtotal + base.currentOrder.ShippingCost +
+                            (base.currentOrder.Subtotal * (checkout.shippingAddress.xp.Taxcost || 0))) | currency}}
+                            left)
+                        </span>
+                        <span ng-if="base.availableFunds - (base.currentOrder.Subtotal + base.currentOrder.ShippingCost + (base.currentOrder.Subtotal * (checkout.shippingAddress.xp.Taxcost || 0))) <= 0">
+                            ({{0 | currency}} left)
+                        </span>
+                        <b class="pull-right text-primary">{{base.availableFunds | currency}}</b>
+                    </h5>
                     <hr>
                     <h5>Balance Due:
-						<b class="pull-right text-primary">
-							<span ng-if = "base.availableFunds - (base.currentOrder.Subtotal + base.currentOrder.ShippingCost + (base.currentOrder.Subtotal * (checkout.shippingAddress.xp.Taxcost || 0))) > 0" > {{0 | currency}}  </span>
-							<span ng-if = "base.availableFunds - (base.currentOrder.Subtotal + base.currentOrder.ShippingCost + (base.currentOrder.Subtotal * (checkout.shippingAddress.xp.Taxcost || 0))) <= 0" > {{base.currentOrder.Subtotal + base.currentOrder.ShippingCost + (base.currentOrder.Subtotal * (checkout.shippingAddress.xp.Taxcost || 0)) - base.availableFunds | currency}} </span>
-						</b>
-					</h5>
+                        <b class="pull-right text-primary">
+                            <span ng-if="base.availableFunds - (base.currentOrder.Subtotal + base.currentOrder.ShippingCost + (base.currentOrder.Subtotal * (checkout.shippingAddress.xp.Taxcost || 0))) > 0">
+                                {{0 | currency}} </span>
+                            <span ng-if="base.availableFunds - (base.currentOrder.Subtotal + base.currentOrder.ShippingCost + (base.currentOrder.Subtotal * (checkout.shippingAddress.xp.Taxcost || 0))) <= 0">
+                                {{base.currentOrder.Subtotal + base.currentOrder.ShippingCost +
+                                (base.currentOrder.Subtotal * (checkout.shippingAddress.xp.Taxcost || 0)) -
+                                base.availableFunds | currency}} </span>
+                        </b>
+                    </h5>
                 </div>
             </div>
         </div>
@@ -66,22 +85,26 @@
                 </div>
                 <div class="panel-body">
                     <p>
-                    	<b>
-	                         <ng-pluralize count="base.currentOrder.LineItemCount" when="{
+                        <b>
+                            <ng-pluralize count="base.currentOrder.LineItemCount" when="{
 								'1': 'Checking Out With 1 Item',
 								'other': 'Checking Out With {} Items'
 							}"></ng-pluralize>
-						</b>
+                        </b>
                     </p>
                     <hr>
                     <h5>Subtotal: All Orders <span class="pull-right">{{base.currentOrder.Subtotal | currency}}</span></h5>
-                	<h5>Shipping: All Orders <span class="pull-right">{{base.currentOrder.ShippingCost | currency}}</span></h5>  
-             	    <h5>Processing Fee: All Orders <span class="pull-right">{{((base.currentOrder.Subtotal * (checkout.shippingAddress.xp.Taxcost || 0))) | currency}}</span></h5>  
+                    <h5>Shipping: All Orders <span class="pull-right">{{base.currentOrder.ShippingCost | currency}}</span></h5>
+                    <h5>Processing Fee: All Orders <span class="pull-right">{{((base.currentOrder.Subtotal *
+                            (checkout.shippingAddress.xp.Taxcost || 0))) | currency}}</span></h5>
                     <hr>
-                    <h4>Estimated Total: <b class="pull-right text-primary">{{base.currentOrder.Subtotal + base.currentOrder.ShippingCost + (base.currentOrder.Subtotal * (checkout.shippingAddress.xp.Taxcost || 0)) | currency}}</b></h4>
+                    <h4>Estimated Total: <b class="pull-right text-primary">{{base.currentOrder.Subtotal +
+                            base.currentOrder.ShippingCost + (base.currentOrder.Subtotal *
+                            (checkout.shippingAddress.xp.Taxcost || 0)) | currency}}</b></h4>
                 </div>
                 <div class="panel-footer">
-                    <button type="button" class="btn btn-primary form-control" ng-disabled="OC_Checkout_Payment.$invalid" ui-sref="checkout.review">Review Order</button>
+                    <button type="button" class="btn btn-primary form-control" ng-disabled="OC_Checkout_Payment.$invalid"
+                        ui-sref="checkout.review">Review Order</button>
                 </div>
             </div>
         </div>
