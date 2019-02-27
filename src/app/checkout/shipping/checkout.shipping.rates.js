@@ -183,7 +183,19 @@ function VendorShippingCriteria() {
 			}
 		},
 		{
-			name: 'Laser Classroom',
+			name: 'Laser',
+			minOrderAmount: 0,
+			shippingCostFunc: function(order) {
+				return 9.99;
+			}
+		},
+		{
+			name: 'LearnersEdge',
+			minOrderAmount: 0,
+			shippingCostFunc: function(order) {return 0;}
+		},
+		{
+			name: 'HUE',
 			minOrderAmount: 0,
 			shippingCostFunc: function(order) {
 				return 9.99;
@@ -212,7 +224,7 @@ function VendorShippingCriteria() {
 			shippingCostFunc: function(order) {
 				return 0.07*order.amount;
 			}
-		},		
+		},
 		{
 			name: 'Office Depot',
 			minOrderAmount: 25,
@@ -264,12 +276,27 @@ function VendorShippingCriteria() {
 					return 0.10*order.amount;
 			}
 		},
-		
+		{
+			name: 'GeniusGames',
+			minOrderAmount: 0,
+			shippingCostFunc: function(order) {
+				if (order.itemCount <= 2)
+					return 5.99;
+				if (order.itemCount <= 5)
+					return 3.99;
+				if (order.itemCount >= 6)
+					return 0;
+			}
+		},		
 		{
 			name: 'Ooly',
 			minOrderAmount: 0,
 			shippingCostFunc: function(order) {
-				return order.amount > 30.00 ? 0 : 4.95;
+				var threeStates = ["AK", "HI", "PR"]; 
+				if(threeStates.indexOf(order.state.toUpperCase()) > -1){
+					return 9.95;
+				}
+				return order.amount > 40.00 ? 0 : 4.95;
 			}
 		},
 		{
@@ -324,11 +351,9 @@ function VendorShippingCriteria() {
 			shippingCostFunc: function(order) {return 0;}
 		},
 		{
-			name: 'Lakeshore Learning Test',
+			name: 'Lakeshore Learning',
 			minOrderAmount: 0,
 			shippingCostFunc: function(order) {
-				//var fifteenPStates = ["AK", "HI", "AS", "FM", "GU", "MH", "MP"];
-				//var twentyPStates = ["AL", "AZ", "AR", "CA", "CO", "CT"]; 
 				var fifteenPStates = ["AL", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "ID",
 						      "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI",
 						      "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY",
