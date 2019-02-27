@@ -1,6 +1,6 @@
 {
   "appname": "AdoptAClassroom.org",
-  "scope": ["Shopper","BuyerImpersonation","AddressAdmin", "AddressReader", "ApprovalRuleAdmin", "ApprovalRuleReader", "BuyerAdmin BuyerUserAdmin", "BuyerUserReader", "CategoryAdmin", "CategoryReader", "CostCenterAdmin", "CostCenterReader", "CreditCardAdmin", "CreditCardReader", "DevCenterWebHookAdmin", "FullAccess", "InventoryAdmin", "MeAddressAdmin", "MeAdmin","MeCreditCardAdmin", "MeXpAdmin", "OrderAdmin", "OrderReader", "OverrideShipping", "OverrideTax", "OverrideUnitPrice", "PermissionAdmin", "PriceScheduleAdmin", "PriceScheduleReader", "ProductAdmin", "ProductAssignmentAdmin", "ProductReader", "PromotionAdmin", "PromotionReader", "SetSecurityProfile", "SpendingAccountAdmin", "SpendingAccountReader", "UnsubmittedOrderReader", "UserGroupAdmin", "UserGroupReader", "BuyerReader"],
+  "scope": ["Shopper", "BuyerImpersonation", "AddressAdmin", "AddressReader", "ApprovalRuleAdmin", "ApprovalRuleReader", "BuyerAdmin BuyerUserAdmin", "BuyerUserReader", "CategoryAdmin", "CategoryReader", "CostCenterAdmin", "CostCenterReader", "CreditCardAdmin", "CreditCardReader", "DevCenterWebHookAdmin", "FullAccess", "InventoryAdmin", "MeAddressAdmin", "MeAdmin", "MeCreditCardAdmin", "MeXpAdmin", "OrderAdmin", "OrderReader", "OverrideShipping", "OverrideTax", "OverrideUnitPrice", "PermissionAdmin", "PriceScheduleAdmin", "PriceScheduleReader", "ProductAdmin", "ProductAssignmentAdmin", "ProductReader", "PromotionAdmin", "PromotionReader", "SetSecurityProfile", "SpendingAccountAdmin", "SpendingAccountReader", "UnsubmittedOrderReader", "UserGroupAdmin", "UserGroupReader", "BuyerReader"],
   "clientid": "DA2AC5E1-76A2-4961-9371-1CAE28D4CEDF",
   "buyerid": "AACBuyer",
   "catalogid": "AACBuyer",
@@ -10,10 +10,9 @@
   "anonymous": false,
   "bootswatchtheme": null,
   "punchoutproduct": "AACPunchoutProduct",
-  "punchouturl": "https://vendors.adoptaclassroom.org", 
+  "punchouturl": "https://vendors.adoptaclassroom.org",
   "adoptAClassromURL": "https://stage-adoptaclassroom.cs78.force.com/teachers/s/",
-  "vendors": [
-    {
+  "vendors": [{
       "Name": "AKJ Education",
       "Value": "AKJ Education",
       "Image": "../assets/images/vendors/AKJ_Education.jpg"
@@ -44,8 +43,8 @@
       "Image": "../assets/images/vendors/Fun_Express.png"
     },
     {
-      "Name": "Genius Games ",
-      "Value": "Genius Games ",
+      "Name": "Genius Games",
+      "Value": "Genius Games",
       "Image": "../assets/images/vendors/geniusgames.png"
     },
     {
