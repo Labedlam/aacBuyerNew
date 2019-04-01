@@ -1,18 +1,19 @@
 {
   "appname": "AdoptAClassroom.org",
-  "scope": ["Shopper", "BuyerImpersonation", "AddressAdmin", "AddressReader", "ApprovalRuleAdmin", "ApprovalRuleReader", "BuyerAdmin BuyerUserAdmin", "BuyerUserReader", "CategoryAdmin", "CategoryReader", "CostCenterAdmin", "CostCenterReader", "CreditCardAdmin", "CreditCardReader", "DevCenterWebHookAdmin", "FullAccess", "InventoryAdmin", "MeAddressAdmin", "MeAdmin", "MeCreditCardAdmin", "MeXpAdmin", "OrderAdmin", "OrderReader", "OverrideShipping", "OverrideTax", "OverrideUnitPrice", "PermissionAdmin", "PriceScheduleAdmin", "PriceScheduleReader", "ProductAdmin", "ProductAssignmentAdmin", "ProductReader", "PromotionAdmin", "PromotionReader", "SetSecurityProfile", "SpendingAccountAdmin", "SpendingAccountReader", "UnsubmittedOrderReader", "UserGroupAdmin", "UserGroupReader", "BuyerReader"],
-  "clientid": "DA2AC5E1-76A2-4961-9371-1CAE28D4CEDF",
+  "scope": ["Shopper","BuyerImpersonation","AddressAdmin", "AddressReader", "ApprovalRuleAdmin", "ApprovalRuleReader", "BuyerAdmin BuyerUserAdmin", "BuyerUserReader", "CategoryAdmin", "CategoryReader", "CostCenterAdmin", "CostCenterReader", "CreditCardAdmin", "CreditCardReader", "DevCenterWebHookAdmin", "FullAccess", "InventoryAdmin", "MeAddressAdmin", "MeAdmin","MeCreditCardAdmin", "MeXpAdmin", "OrderAdmin", "OrderReader", "OverrideShipping", "OverrideTax", "OverrideUnitPrice", "PermissionAdmin", "PriceScheduleAdmin", "PriceScheduleReader", "ProductAdmin", "ProductAssignmentAdmin", "ProductReader", "PromotionAdmin", "PromotionReader", "SetSecurityProfile", "SpendingAccountAdmin", "SpendingAccountReader", "UnsubmittedOrderReader", "UserGroupAdmin", "UserGroupReader", "BuyerReader"],
+  "clientid": "AA3612AD-098D-44E1-8D5D-41AE1994EEFA",
   "buyerid": "AACBuyer",
   "catalogid": "AACBuyer",
   "clientsecret": "myclientsecret",
-  "environment": "staging",
+  "environment": "prod",
   "defaultstate": "home",
   "anonymous": false,
   "bootswatchtheme": null,
   "punchoutproduct": "AACPunchoutProduct",
-  "punchouturl": "https://vendors.adoptaclassroom.org",
-  "adoptAClassromURL": "https://stage-adoptaclassroom.cs78.force.com/teachers/s/",
-  "vendors": [{
+  "punchouturl": "https://vendors.adoptaclassroom.org", 
+  "adoptAClassromURL": "https://adoptaclassroom.force.com/teachers/s/",
+  "vendors": [
+    {
       "Name": "AKJ Education",
       "Value": "AKJ Education",
       "Image": "../assets/images/vendors/AKJ_Education.jpg"
